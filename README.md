@@ -1,5 +1,5 @@
 # notable-flask
-Web API for processing Notable! android application requests.
+Web API for processing Notable! android application requests. This web application is hosted by pythonanywhere!
 
 
 ## File Hierarchy
