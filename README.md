@@ -3,7 +3,6 @@ Web API for processing Notable! android application requests. This web applicati
 
 
 ## File Hierarchy
-Make sure your folder structure is as follows:
 ```
 app.py
 vocabulary_semantic.txt
