@@ -1,15 +1,15 @@
 from flask import Flask,request,send_from_directory,render_template
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import tensorflow as tf
 import tensorflow.compat.v1 as tf
-tf.compat.v1.disable_eager_execution()
+tf.disable_eager_execution()
 import cv2
 import numpy as np
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__)
+#app = Flask(__name__, static_url_path='')
 
 def sparse_tensor_to_strs(sparse_tensor):
     indices= sparse_tensor[0][0]
