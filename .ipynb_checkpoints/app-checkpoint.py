@@ -9,6 +9,7 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 app = Flask(__name__)
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 #app = Flask(__name__, static_url_path='')
 
 def sparse_tensor_to_strs(sparse_tensor):
@@ -39,9 +40,8 @@ def resize(image, height):
     sample_img = cv2.resize(image, (width, height))
     return sample_img
 
-voc_file = "vocabulary_semantic.txt"
-model = "semantic_model/semantic_model.meta"
-
+voc_file = os.path.join(THIS_FOLDER, 'vocabulary_semantic.txt')
+model = os.path.join(THIS_FOLDER, 'semantic_model/semantic_model.meta')
 tf.reset_default_graph()
 sess = tf.InteractiveSession()
 # Read the dictionary
