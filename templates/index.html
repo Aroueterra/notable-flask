@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web-OMR</title>
+    <title>Notable! API</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -20,37 +20,11 @@
         <div class="navbar-brand">
           <a class="navbar-item">
             <h1 class="title">
-                Web-OMR
+                Notable! API
              </h1>
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
         </div>
-        <div id="navbarMenuHeroC" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active" href="http://localhost:5000/?">
-              Home
-            </a>
-            <a class="navbar-item">
-              Result
-            </a>
-            <a class="navbar-item" href="https://www.mdpi.com/2076-3417/8/4/606/htm">
-              How this works
-            </a>
-            <span class="navbar-item">
-              <a class="button is-success is-inverted" href="https://github.com/liuhh02">
-                <span class="icon">
-                  <i class="fas fa-info-circle"></i>
-                </span>
-                <span>Contact</span>
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
+       </div>
     </header>
   </div>
 
@@ -58,7 +32,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
      <h2 class="subtitle">
-        Upload your Music Score
+        upload image
       </h2>
      <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
         <div id="file-js-example" class="file has-name is-centered is-boxed">
