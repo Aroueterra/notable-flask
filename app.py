@@ -1,17 +1,22 @@
-from flask import Flask,request,send_from_directory,render_template
-from flask_ngrok import run_with_ngrok
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import tensorflow as tf
-import tensorflow.compat.v1 as tf
-tf.disable_eager_execution()
 import cv2
 import numpy as np
+import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
+from flask_ngrok import run_with_ngrok
+from flask import Flask,request,send_from_directory,render_template
+
+# GLOBAL ACCESS
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+# SETUP APPLICATION
+tf.disable_eager_execution()
 app = Flask(__name__, static_url_path='')
 run_with_ngrok(app)
+
 def sparse_tensor_to_strs(sparse_tensor):
     indices= sparse_tensor[0][0]
     values = sparse_tensor[0][1]
@@ -30,10 +35,8 @@ def sparse_tensor_to_strs(sparse_tensor):
     strs[b] = string
     return strs
 
-
 def normalize(image):
     return (255. - image)/255.
-
 
 def resize(image, height):
     width = int(float(height * image.shape[1]) / image.shape[0])
@@ -42,7 +45,6 @@ def resize(image, height):
 
 voc_file = "vocabulary_semantic.txt"
 model = "semantic_model/semantic_model.meta"
-
 tf.reset_default_graph()
 sess = tf.InteractiveSession()
 # Read the dictionary
@@ -57,9 +59,7 @@ dict_file.close()
 # Restore weights
 saver = tf.train.import_meta_graph(model)
 saver.restore(sess,model[:-5])
-
 graph = tf.get_default_graph()
-
 input = graph.get_tensor_by_name("model_input:0")
 seq_len = graph.get_tensor_by_name("seq_lengths:0")
 rnn_keep_prob = graph.get_tensor_by_name("keep_prob:0")
@@ -71,15 +71,44 @@ logits = tf.get_collection("logits")[0]
 WIDTH_REDUCTION, HEIGHT = sess.run([width_reduction_tensor, height_tensor])
 
 decoded, _ = tf.nn.ctc_greedy_decoder(logits, seq_len)
-
-@app.route('/img/<filename>')
-def send_img(filename):
-    return send_from_directory('', filename)
-
+# HOME
 @app.route("/")
 def root():
     return render_template('index.html')
+# IMAGE REQUEST
+@app.route('/img/<filename>')
+def send_img(filename):
+    return send_from_directory('', filename)
+# ANDROID REQUEST
+@android_route.route('/android/login', methods = ['GET', 'POST'])
+def login():
+    return 'hello'
+# GET
+@app.route('/users/<var>')
+def hello_user(var):
+    """
+    this serves as a demo purpose
+    :param user:
+    :return: str
+    """
+    return "Wow, the GET works %s!" % var
 
+# POST
+@app.route('/api/post_some_data', methods=['POST'])
+def get_text_prediction():
+    """
+    predicts requested text whether it is ham or spam
+    :return: json
+    """
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return jsonify({'error': 'invalid input'})
+
+    return jsonify({'This is the KEY': json['This is the value?']})
+
+
+# MODEL PREDICTION
 @app.route('/predict', methods = ['GET', 'POST'])
 def predict():
     if request.method == 'POST':
