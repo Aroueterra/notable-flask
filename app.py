@@ -1,4 +1,5 @@
 from flask import Flask,request,send_from_directory,render_template
+from flask_ngrok import run_with_ngrok
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf
@@ -10,7 +11,7 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 app = Flask(__name__, static_url_path='')
-
+run_with_ngrok(app)
 def sparse_tensor_to_strs(sparse_tensor):
     indices= sparse_tensor[0][0]
     values = sparse_tensor[0][1]
@@ -82,6 +83,50 @@ def root():
 @app.route('/predict', methods = ['GET', 'POST'])
 def predict():
     if request.method == 'POST':
+        f = request.files['file']
+        img = f
+        image = Image.open(img).convert('L')
+        image = np.array(image)
+        image = resize(image, HEIGHT)
+        image = normalize(image)
+        image = np.asarray(image).reshape(1,image.shape[0],image.shape[1],1)
+        seq_lengths = [ image.shape[2] / WIDTH_REDUCTION ]
+        prediction = sess.run(decoded,
+                          feed_dict={
+                              input: image,
+                              seq_len: seq_lengths,
+                              rnn_keep_prob: 1.0,
+                          })
+        str_predictions = sparse_tensor_to_strs(prediction)
+        array_of_notes = []
+
+        for w in str_predictions[0]:
+            array_of_notes.append(int2word[w])
+        notes=[]
+        for i in array_of_notes:
+            if i[0:5]=="note-":
+                if not i[6].isdigit():
+                    notes.append(i[5:7])
+                else:
+                    notes.append(i[5])
+        img = Image.open(img).convert('L')
+        size = (img.size[0], int(img.size[1]*1.5))
+        layer = Image.new('RGB', size, (255,255,255))
+        layer.paste(img, box=None)
+        img_arr = np.array(layer)
+        height = int(img_arr.shape[0])
+        width = int(img_arr.shape[1])
+        print(img_arr.shape[0])
+        draw = ImageDraw.Draw(layer)
+        # font = ImageFont.truetype(<font-file>, <font-size>)
+        font = ImageFont.truetype("Aaargh.ttf", 16)
+        # draw.text((x, y),"Sample Text",(r,g,b))
+        j = width / 9
+        for i in notes:
+            draw.text((j, height-40), i, (0,0,0), font=font)
+            j+= (width / (len(notes) + 4))
+        layer.save("annotated.png")
         return render_template('result.html')
+
 if __name__=="__main__":
     app.run()
