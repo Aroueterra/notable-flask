@@ -1,0 +1,9 @@
+clef-F4
+keySignature-GM
+rest-whole
+rest-half
+note-Bb3_half
+note-C4_quarter
+rest-half
+note-F3_eighth
+rest-eighth
