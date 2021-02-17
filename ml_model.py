@@ -17,7 +17,6 @@ import ctc_utils
 import os
 from pathlib import Path
 
-start_time = time.time()
 tf_v1.compat.v1.disable_eager_execution()
 class ML:
     model = ''
@@ -54,10 +53,8 @@ class ML:
         self.WIDTH_REDUCTION = 16
         return self.session
     
-    def generateWAV():
-        print("s")
-    
     def predict(self, cv_img):
+        start_time = time.time()
         segmented_staves = Slice(cv_img)   
         print("SLICE COMPLETED in: " + str(time.time() - start_time) )        
         file_name = segmented_staves[0].name.split('.')[-2]

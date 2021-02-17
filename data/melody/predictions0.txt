@@ -1,11 +1,10 @@
 clef-G2
 keySignature-DM
-timeSignature-6/4
-rest-quarter._fermata
-note-E6_thirty_second
+timeSignature-2/2
+note-D6_thirty_second
 rest-quarter_fermata
 rest-quarter_fermata
-note-F#4_eighth
+note-F#4_sixteenth
 note-F#4_eighth.
 note-F#4_eighth
 barline

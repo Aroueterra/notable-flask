@@ -1,5 +1,5 @@
 clef-G2
-timeSignature-C/
+timeSignature-4/4
 note-D4_quarter.
 note-F#4_quarter
 note-G4_eighth

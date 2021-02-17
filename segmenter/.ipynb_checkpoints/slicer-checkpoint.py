@@ -53,6 +53,7 @@ def Slice(cv_img):
     show_images([imgs_with_staff[0]])
     mypath = Path().absolute()
     file_path = str(mypath) + '\\segmenter\\output\\'
+    zip_path = str(mypath) + '\\data\\melody\\'
     delete_path = str(mypath) + '\\segmenter\\output'
     absolute_path = Path(file_path)
     print("Output of slices: " + file_path)
@@ -66,11 +67,14 @@ def Slice(cv_img):
         plt.gca().set_axis_off()
         plt.gca().set_title("")
         fig=plt.imshow(imgs_with_staff[i],interpolation='nearest')
+        
         output_path = file_path+'slice'+str(i)+'.png'
         plt.savefig(output_path,
         bbox_inches='tight', pad_inches=0, format='png', dpi=600)
+        zipped_path = zip_path+'slice'+str(i)+'.png'
+        plt.savefig(zipped_path,
+        bbox_inches='tight', pad_inches=0, format='png', dpi=600)
         print("    ++Image generated in " + str(time.time() - start_time))
-        print(output_path)
         crop(output_path)
         segmented_staves.append(Path(output_path))
 

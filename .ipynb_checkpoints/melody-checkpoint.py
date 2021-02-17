@@ -17,6 +17,13 @@ def generateWAV(all_predictions, merged):
     export = 0
     single = merged
     directory = 'data\\melody\\'
+    del_directory = '\\data\\melody'
+    mypath = Path().absolute()
+    delete_str = str(mypath) + del_directory
+    remove_dir = os.listdir(delete_str)
+    for item in remove_dir:
+        if (item.endswith(".wav")) or (item.endswith(".txt")) or (item.endswith(".png")):
+            os.remove(os.path.join(delete_str, item))
     all_txt = ''.join(map(str, all_predictions))
     with open(directory + 'all_predictions'+'.txt', 'w') as file:
         file.write(all_txt)       

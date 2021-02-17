@@ -1,4 +1,5 @@
 clef-G2
+keySignature-GM
 timeSignature-C/
 note-D5_half.
 note-A4_quarter
@@ -6,14 +7,15 @@ note-A4_eighth
 note-G#4_quarter
 note-F#4_eighth
 barline
-note-C5_quarter
-note-A4_quarter
+note-C#5_eighth
+note-A4_eighth
 note-B4_eighth
 note-C#5_quarter.
+gracenote-C#5_sixteenth
 note-D5_quarter
 note-C#5_eighth
 barline
-note-D4_half.
+note-F#4_half.
 rest-quarter.
 rest-quarter
 note-A4_eighth
@@ -21,4 +23,5 @@ barline
 note-A4_quarter.
 note-B4_quarter.
 note-E4_quarter.
-note-A4_quarter.
+note-A4_quarter
+barline

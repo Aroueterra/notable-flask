@@ -1,5 +1,10 @@
+import os
 import cv2
+import time
+import shutil
+import zipfile
 import numpy as np
+from io import BytesIO
 
 def sparse_tensor_to_strs(sparse_tensor):
     indices= sparse_tensor[0][0]
@@ -28,3 +33,36 @@ def resize(image, height):
     return sample_img
 def elements(array):
     return array.ndim and array.size
+
+def allowed_file(filename):
+    ALLOWED_EXTENSIONS = { 'png', 'jpg', 'jpeg', 'gif'}
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def compress1(output_filename, dir_name):
+    shutil.make_archive(output_filename, 'zip', dir_name)
+    
+def compress2(file_name):
+    memory_file = BytesIO()
+    with zipfile.ZipFile(memory_file, 'w') as zf:
+        files = result['files']
+        for individualFile in files:
+            data = zipfile.ZipInfo(individualFile['fileName'])
+            data.date_time = time.localtime(time.time())[:6]
+            data.compress_type = zipfile.ZIP_DEFLATED
+            zf.writestr(data, individualFile['fileData'])
+    memory_file.seek(0)
+    return send_file(memory_file, attachment_filename='capsule.zip', as_attachment=True)
+
+def compress(file):
+    #timestr = time.strftime("%Y%m%d-%H%M%S")
+    file_path = file
+    memory_file = BytesIO()
+    
+    with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
+          for root, dirs, files in os.walk(file_path):
+                    for file in files:
+                              zipf.write(os.path.join(root, file))
+    memory_file.seek(0)
+    return memory_file
+    
