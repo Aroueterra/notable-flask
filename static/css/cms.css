@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "kaneda_gothic_boldbold";
+  src: url("kanedagothic-bold-webfont.woff2") format("woff2"),
+    url("kanedagothic-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kaneda_gothic_boldbold";
+  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff2");
+  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff")
+    format("woff");
+}
+
+.row {
+    text-align: left;
+
+}
+html, body{
+  width: 100%;
+}
+h1 {
+  font-family: "kaneda_gothic_boldbold", Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 52;
+  color:white;
+  margin-top: 3em;
+  line-height : 100%; 
+    margin-top : 1cm; 
+    display : block; 
+}
+table th td tr {
+  border: 1px solid black;
+  padding: 1px;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; */
+  opacity: 1.0 !important;
+}
+.ind{
+    /* background-color: white; */
+    margin-left: 1em;
+    /* opacity: 0.7; */
+    background: rgba(255, 255, 255, 0.507); /* newer browsers */
+}
+.ind>table{
+    background: white;
+}
+td {
+  
+    /* max-width: 100px !important; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+#bold{
+    font-weight: bold;
+}
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+    padding: 1px;
+    }
+
+table {
+    background-color: white;
+    align-self: center;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+img{
+    max-width: 30px;
+    max-height: 30px;
+}
+th {
+  text-align: left;
+  font-family: "kaneda_gothic_boldbold", Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 42;
+  text-transform: capitalize;
+}
+td {
+  text-align: center;
+  padding: 15px;
+  
+}
+.rhs {
+    text-align: center;
+  }
+.lhs {
+  background-color: darkslategray;
+  font-weight: bold;
+  color: white;
+}
+.lhs:hover {
+  background-color: rgb(112, 182, 182);
+}
+.ths {
+  background-color: darkslategray;
+  font-weight: bold;
+  color: white;
+}
+.ths:hover {
+  background-color: rgb(112, 182, 182);
+}
+/* .top {
+  
+} */
+.title {
+    text-align: left;
+    font-family: "kaneda_gothic_boldbold", Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+html { 
+    background: url(images/bgg.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    }
+.cont {
+  background-color: rgb(255, 0, 0);
+  background-image: url("box.jpg");
+}
+.cont:hover {
+  background-image: none;
+  height: 50%;
+  z-index: 555555 !important;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: gold;
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.name {
+  background-color: darkslategray;
+  color: white;
+}
+.name:hover {
+  background-color: rgb(112, 182, 182);
+}
+.lab {
+  background-color: darkslategray;
+  color: white;
+}
+.lab:hover {
+  background-color: rgb(112, 182, 182);
+}
+.over {
+  border: 1px solid black;
+}
+body {
+  /* background-image: url("bgg.jpg"); */
+  background: rgb(0,255,248);
+  background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(0,51,112,1) 60%);
+  
+}
+#dark{
+    color:rgb(146, 143, 143);
+}
+#doc3 {
+  margin: auto 0px;
+  width: auto;
+  background: rgb(0,255,248);
+  background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(0,51,112,1) 60%);
+  min-height: calc(100vh - 400px - 3rem);
+}
+.panel {
+  position: fixed;
+  left: -15.625em; /*left or right and the width of your navigation panel*/
+  width: 15.625em; /*should match the above value*/
+}
+.wrap {
+  position: relative;
+}
+.main{
+  z-index: 20;
+  background: white;
+}
+html, body{
+  height: 100%;
+}
+nav.scrollmenu a {
+   display: block; 
+  position: relative;
+  color: white;
+  text-align: right;
+  padding: 14px;
+  text-decoration: none;
+}
+#menu{
+  z-index: 30;
+  background-color: red;
+}
+.main{
+  z-index: -1;
+}
+nav{
+  z-index: 20;
+  background: linear-gradient(207deg, #ffffff, #00dbff, #0049ff);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 11s ease infinite;
+-moz-animation: AnimationName 11s ease infinite;
+animation: AnimationName 11s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+}
+hr.style13 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+.hr-primary{
+   background-image: -webkit-linear-gradient(left, rgba(66,133,244,.8), rgba(66, 133, 244,.6), rgba(0,0,0,0)); 
+}

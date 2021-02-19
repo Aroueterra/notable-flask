@@ -1,76 +1,119 @@
 <!DOCTYPE html>
+
 <html>
+
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Notable! API</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title> Notable! API! </title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/build.css') }}">
+
+
+
+  <!-- Required meta tags -->
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.css') }}">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
 </head>
+
+
 
 <body>
 
 
-<section class="hero is-light is-fullheight">
-  <!-- Hero head: will stick at the top -->
 
-  <div class="hero-head">
-    <header class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            <h1 class="title">
-                Notable! API
-             </h1>
-          </a>
+  <div class="wrapper">
+
+    <!-- Navbar super -->
+
+    <section class="section ">
+
+      <div class="hero-head"></div>
+
+      <div class="hero-body  hide is-large">
+        <div class="container headings ">
+          <p class="title im has-text-centered has-text-white is-size-1" style="font-family: 'Betm';">
+            Notable!<span class="has-text-primary has-text-weight-semibold">API</span>
+          </p>
+          <p class="subtitle im has-text-centered has-text-grey-dark is-size-7" style="font-family: 'Betm';">
+          </p>
         </div>
-       </div>
-    </header>
+      </div>
   </div>
+  </div>
+  <section class="hero is-medium is-white is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          &nbsp Try sending some monophonic sheet music
+          <br><br>
+        </h1>
+        <h2 class="subtitle">
+          Please wait until the download finishes before translating a new sheet
+          <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+            <div id="file-js-example" class="file has-name is-centered control is-expanded">
+              <label class="file-label">
+                <input class="file-input is-left is-info" type="file" name="file">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    UPLOAD
+                  </span>
+                </span>
+                <span class="file-name">
+                  
+                </span>
+                <input class="button is-success default is-expanded is-right control" type="submit" value="Translate">
+              </label>
+            </div>
+            <script>
+              const fileInput = document.querySelector('#file-js-example input[type=file]');
+              fileInput.onchange = () => {
+                if (fileInput.files.length > 0) {
+                  const fileName = document.querySelector('#file-js-example .file-name');
+                  fileName.textContent = fileInput.files[0].name;
+                }
+              }
+            </script>
+            <br>
+            <br>
+            
+          </form>
+      </div>
 
-  <!-- Hero content: will be in the middle -->
-  <div class="hero-body">
-    <div class="container has-text-centered">
-     <h2 class="subtitle">
-        upload image
+
+
+      </form>
+
       </h2>
-     <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
-        <div id="file-js-example" class="file has-name is-centered is-boxed">
-          <label class="file-label">
-            <input class="file-input" type="file" name="file">
-            <span class="file-cta">
-              <span class="file-icon">
-                <i class="fas fa-upload"></i>
-              </span>
-              <span class="file-label">
-                Choose a file…
-              </span>
-            </span>
-            <span class="file-name">
-              No file uploaded
-            </span>
-          </label>
-        </div>
 
-        <script>
-          const fileInput = document.querySelector('#file-js-example input[type=file]');
-          fileInput.onchange = () => {
-            if (fileInput.files.length > 0) {
-              const fileName = document.querySelector('#file-js-example .file-name');
-              fileName.textContent = fileInput.files[0].name;
-            }
-          }
-        </script>
-        <br>
-        <br>
-        <input class="button is-primary" type="submit" value="ReadThatSheet!">
-    </form>
+
 
     </div>
-  </div>
 
-</section>
+    </div>
+
+
+  </section>
+
+  </section>
+
+  </div>
 
 
 </body>
+
+
+
 </html>

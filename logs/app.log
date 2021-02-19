@@ -1,0 +1,54 @@
+2021-02-19 23:20:14,221 - app - INFO - File: exists | Format: matching
+2021-02-19 23:20:38,782 - app - INFO - All processes completed: 24.411720514297485
+2021-02-19 23:36:29,329 - app - INFO - POST: success
+2021-02-19 23:36:29,409 - app - INFO - # of files in request: 1
+2021-02-19 23:36:29,410 - app - INFO - Host: 1c3320822b98.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+Content-Length: 900631
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryKhLAW5N6vsodjD8Y
+Origin: https://1c3320822b98.ngrok.io
+Referer: https://1c3320822b98.ngrok.io/
+Sec-Ch-Ua: "Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 180.191.234.147
+X-Forwarded-Proto: https
+
+
+2021-02-19 23:36:29,411 - app - INFO - File: exists
+2021-02-19 23:36:29,411 - app - INFO - File: exists | Format: matching
+2021-02-19 23:36:52,731 - app - INFO - All processes completed: 23.320757627487183
+2021-02-19 23:41:30,739 - app - INFO - POST: success
+2021-02-19 23:41:30,740 - app - INFO - # of files in request: 1
+2021-02-19 23:41:30,740 - app - INFO - Host: 1e7dcd717812.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+Content-Length: 27534
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarycOdQRCL6V5TH5huS
+Origin: https://1e7dcd717812.ngrok.io
+Referer: https://1e7dcd717812.ngrok.io/
+Sec-Ch-Ua: "Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 180.191.234.147
+X-Forwarded-Proto: https
+
+
+2021-02-19 23:41:30,740 - app - INFO - File: exists
+2021-02-19 23:41:30,740 - app - INFO - File: exists | Format: matching
+2021-02-19 23:42:01,273 - app - INFO - All processes completed: 30.532976865768433

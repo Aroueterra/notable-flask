@@ -6,6 +6,8 @@
 
 import silence_tensorflow.auto
 import time
+import traceback
+import logging
 import numpy as np
 import tensorflow as tf
 import tensorflow.compat.v1 as tf_v1
@@ -16,6 +18,7 @@ import cv2
 import ctc_utils
 import os
 from pathlib import Path
+from config import logger
 
 tf_v1.compat.v1.disable_eager_execution()
 class ML:
@@ -54,16 +57,17 @@ class ML:
         return self.session
     
     def predict(self, cv_img):
+        
         start_time = time.time()
         segmented_staves = Slice(cv_img)   
-        print("SLICE COMPLETED in: " + str(time.time() - start_time) )        
+        logger.info("MODEL: sliced segments: " + str(time.time() - start_time))    
         file_name = segmented_staves[0].name.split('.')[-2]
         file_ext = str(segmented_staves[0]).split('.')[1]
         counter = 1
         all_predictions=[]
         current_file = segmented_staves[0]
         while current_file.exists():
-            print("    ++Adding one more song to playlist " + str(time.time() - start_time))
+            logger.info("MODEL: song++ to playlist " + str(time.time() - start_time))    
             file_name = str(current_file).split('.')[-2]
             image = cv2.imread(str(current_file),0)
             image = ctc_utils.resize(image, 128)
@@ -77,6 +81,7 @@ class ML:
                                   self.rnn_keep_prob: 1.0,
                               })
             str_predictions = ctc_utils.sparse_tensor_to_strs(prediction)
+            
             parsed_predictions = ''
             for w in str_predictions[0]:
                 parsed_predictions += self.int2word[w] + '\n' 
@@ -88,7 +93,7 @@ class ML:
             counter+=1
             
             all_predictions.append(parsed_predictions)
-            print("PREDICTION COMPLETED in: " + str(time.time() - start_time))
+            logger.info("MODEL: work completed " + str(time.time() - start_time))    
         return all_predictions
     
         

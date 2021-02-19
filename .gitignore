@@ -1,2 +1,4 @@
-
+data\melody
+data/melody
 ssemantic_model/semantic_model.data-00000-of-00001s
+data/melody/all_predictions.txt

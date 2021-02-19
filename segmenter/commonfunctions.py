@@ -3,6 +3,8 @@ import cv2
 import skimage.io as io
 import matplotlib.pyplot as plt
 import numpy as np
+import shutil
+import os
 from skimage.exposure import histogram
 from matplotlib.pyplot import bar
 from skimage.color import rgb2gray
@@ -12,12 +14,29 @@ from skimage.feature import canny
 from skimage.transform import resize
 from PIL import Image, ImageChops
 
+def copy(src, dst):
+    shutil.rmtree(dst + "\\melody")
+    print(dst + " " + src)
+    shutil.copytree(os.path.join(src, "output\\"), os.path.join(dst, "melody\\"))
+#     if os.path.isdir(dst):
+#         dst = os.path.join(dst, os.path.basename(src))
+#     shutil.copyfile(src, dst)
+    
+def save_slice(i,output_path,img):
+    plt.rcParams["figure.figsize"] = (20,15)
+    plt.gca().set_axis_off()
+    plt.gca().set_title("")
+    fig=plt.imshow(img,interpolation='nearest')
+    plt.savefig(output_path,
+    bbox_inches='tight', pad_inches=0, format='png', dpi=600)
+    
+
 def crop(path):
     #img = Image.fromarray(np.uint8(img))
     img = Image.open(path)
     #print(type(img))
     pixels = img.load()
-    print (f"original: {img.size[0]} x {img.size[1]}")
+    #print (f"original: {img.size[0]} x {img.size[1]}")
     xlist = []
     ylist = []
     for y in range(0, img.size[1]):
@@ -30,7 +49,7 @@ def crop(path):
     top = min(ylist)
     bottom = max(ylist)
     img = img.crop((left-10, top-10, right+10, bottom+10))
-    print (f"cropped: {img.size[0]} x {img.size[1]}")
+    #print (f"cropped: {img.size[0]} x {img.size[1]}")
     img.save(path)
     #img = np.asarray(img)
 

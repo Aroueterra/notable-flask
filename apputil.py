@@ -55,7 +55,6 @@ def compress2(file_name):
     return send_file(memory_file, attachment_filename='capsule.zip', as_attachment=True)
 
 def compress(file):
-    #timestr = time.strftime("%Y%m%d-%H%M%S")
     file_path = file
     memory_file = BytesIO()
     
