@@ -50,11 +50,13 @@ def login():
     return 'Yeah, it works.'
 
 # POST TEST
-@app.route('/test', methods=['POST'])
+@app.route('/test', methods = ['GET', 'POST'])
 def test_output():
     app.logger.info('TEST: headers')
     app.logger.info(request.headers)
-    return jsonify(success=1,error="none",error_type="")
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               "archive.zip", as_attachment=True)
+    #return jsonify(success=1,error="none",error_type="")
 
 
 # MODEL PREDICTION
