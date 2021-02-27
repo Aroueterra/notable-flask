@@ -1,54 +1,91 @@
-2021-02-19 23:20:14,221 - app - INFO - File: exists | Format: matching
-2021-02-19 23:20:38,782 - app - INFO - All processes completed: 24.411720514297485
-2021-02-19 23:36:29,329 - app - INFO - POST: success
-2021-02-19 23:36:29,409 - app - INFO - # of files in request: 1
-2021-02-19 23:36:29,410 - app - INFO - Host: 1c3320822b98.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
-Content-Length: 900631
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryKhLAW5N6vsodjD8Y
-Origin: https://1c3320822b98.ngrok.io
-Referer: https://1c3320822b98.ngrok.io/
-Sec-Ch-Ua: "Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 180.191.234.147
+2021-02-26 01:22:24,920 - app - INFO - All processes completed: 46.79438304901123
+2021-02-26 01:37:48,856 - app - INFO - POST: success
+2021-02-26 01:37:48,857 - app - INFO - # of files in request: 1
+2021-02-26 01:37:48,857 - app - INFO - Host: c727a3a40de7.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=55a03854-3908-44e1-b9ca-f7945ccfb3ad
+X-Forwarded-For: 2001:4451:ab7:e700:14c4:59a2:d000:aa27
 X-Forwarded-Proto: https
 
 
-2021-02-19 23:36:29,411 - app - INFO - File: exists
-2021-02-19 23:36:29,411 - app - INFO - File: exists | Format: matching
-2021-02-19 23:36:52,731 - app - INFO - All processes completed: 23.320757627487183
-2021-02-19 23:41:30,739 - app - INFO - POST: success
-2021-02-19 23:41:30,740 - app - INFO - # of files in request: 1
-2021-02-19 23:41:30,740 - app - INFO - Host: 1e7dcd717812.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
-Content-Length: 27534
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundarycOdQRCL6V5TH5huS
-Origin: https://1e7dcd717812.ngrok.io
-Referer: https://1e7dcd717812.ngrok.io/
-Sec-Ch-Ua: "Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 180.191.234.147
+2021-02-26 01:37:48,857 - app - INFO - File: exists
+2021-02-26 01:37:48,858 - app - INFO - File: name = happybday_c.jpg
+2021-02-26 01:37:48,858 - app - INFO - File: exists | Format: matching
+2021-02-26 01:38:29,334 - app - INFO - All processes completed: 40.4729859828949
+2021-02-27 15:47:30,036 - app - INFO - POST: success
+2021-02-27 15:47:30,312 - app - INFO - # of files in request: 1
+2021-02-27 15:47:30,331 - app - INFO - Host: 7496b8e59ea5.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=de283e9c-d991-43e8-83e9-2c74572fdd23
+X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
 X-Forwarded-Proto: https
 
 
-2021-02-19 23:41:30,740 - app - INFO - File: exists
-2021-02-19 23:41:30,740 - app - INFO - File: exists | Format: matching
-2021-02-19 23:42:01,273 - app - INFO - All processes completed: 30.532976865768433
+2021-02-27 15:47:30,331 - app - INFO - File: exists
+2021-02-27 15:47:30,331 - app - INFO - File: name = happybday_c.jpg
+2021-02-27 15:47:30,384 - app - INFO - File: exists | Format: matching
+2021-02-27 15:48:27,685 - app - INFO - All processes completed: 57.300058364868164
+2021-02-27 16:32:03,973 - app - INFO - POST: success
+2021-02-27 16:32:03,975 - app - INFO - # of files in request: 1
+2021-02-27 16:32:03,975 - app - INFO - Host: 7496b8e59ea5.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=fcf70286-b99b-4402-80ba-f35b073755cf
+X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+X-Forwarded-Proto: https
+
+
+2021-02-27 16:32:03,975 - app - INFO - File: exists
+2021-02-27 16:32:03,975 - app - INFO - File: name = happybday_c.jpg
+2021-02-27 16:32:03,976 - app - INFO - File: exists | Format: matching
+2021-02-27 16:33:00,130 - app - INFO - All processes completed: 56.15405011177063
+2021-02-27 16:42:36,517 - app - INFO - POST: success
+2021-02-27 16:42:36,517 - app - INFO - # of files in request: 1
+2021-02-27 16:42:36,517 - app - INFO - Host: 7496b8e59ea5.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=679247f9-fe0e-4c9a-a68f-f7d2a8cbcbf8
+X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+X-Forwarded-Proto: https
+
+
+2021-02-27 16:42:36,517 - app - INFO - File: exists
+2021-02-27 16:42:36,517 - app - INFO - File: name = happybday_c.jpg
+2021-02-27 16:42:36,517 - app - INFO - File: exists | Format: matching
+2021-02-27 16:44:21,242 - app - INFO - All processes completed: 104.72476053237915
+2021-02-27 18:19:11,133 - app - INFO - POST: success
+2021-02-27 18:19:11,230 - app - INFO - # of files in request: 1
+2021-02-27 18:19:11,237 - app - INFO - Host: 7496b8e59ea5.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=9b7103d6-f390-42c2-8479-ef0b166c66a4
+X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+X-Forwarded-Proto: https
+
+
+2021-02-27 18:19:11,237 - app - INFO - File: exists
+2021-02-27 18:19:11,237 - app - INFO - File: name = happybday_c.jpg
+2021-02-27 18:19:11,304 - app - INFO - File: exists | Format: matching
+2021-02-27 18:21:01,801 - app - INFO - All processes completed: 110.49706697463989
+2021-02-27 18:28:33,781 - app - INFO - POST: success
+2021-02-27 18:28:33,781 - app - INFO - # of files in request: 1
+2021-02-27 18:28:33,782 - app - INFO - Host: 7496b8e59ea5.ngrok.io
+User-Agent: okhttp/4.9.0
+Content-Length: 566759
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=480d4e62-26fb-4de8-aac8-efefadba24bf
+X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+X-Forwarded-Proto: https
+
+
+2021-02-27 18:28:33,782 - app - INFO - File: exists
+2021-02-27 18:28:33,787 - app - INFO - File: name = happybday_c.jpg
+2021-02-27 18:28:33,787 - app - INFO - File: exists | Format: matching
+2021-02-27 18:29:36,418 - app - INFO - All processes completed: 62.631587743759155

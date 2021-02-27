@@ -7,7 +7,7 @@ def convert_inputs_to_ctc_format(target_text):
     FIRST_INDEX = 0
 
     original = ' '.join(target_text.strip().lower().split(' ')).replace('.', '').replace('?', '').replace(',', '').replace("'", '').replace('!', '').replace('-', '')
-    print(original)
+#     print(original)
     targets = original.replace(' ', '  ')
     targets = targets.split(' ')
 

@@ -57,11 +57,20 @@ def compress2(file_name):
 def compress(file):
     file_path = file
     memory_file = BytesIO()
-    
+    rootdir = os.path.basename(file_path)
     with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
           for root, dirs, files in os.walk(file_path):
                     for file in files:
-                              zipf.write(os.path.join(root, file))
+                        # Write the file named filename to the archive,
+                        # giving it the archive name 'arcname'.
+                        filepath   = os.path.join(root, file)
+                        parentpath = os.path.relpath(filepath, file_path)
+                        #arcname    = os.path.join(rootdir, parentpath)
+
+                        zipf.write(filepath, file)
+                        #zipf.write(os.path.join(root, file))
+                              #zipf.write(os.path.join(root, file))
+                            
     memory_file.seek(0)
     return memory_file
     

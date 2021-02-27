@@ -18,9 +18,13 @@ def copy(src, dst):
     shutil.rmtree(dst + "\\melody")
     print(dst + " " + src)
     shutil.copytree(os.path.join(src, "output\\"), os.path.join(dst, "melody\\"))
-#     if os.path.isdir(dst):
-#         dst = os.path.join(dst, os.path.basename(src))
-#     shutil.copyfile(src, dst)
+
+def crop_image(input_image, output_image, start_x, start_y, width, height):
+    """Pass input name image, output name image, x coordinate to start croping, y coordinate to start croping, width to crop, height to crop """
+    input_img = Image.open(input_image)
+    box = (start_x, start_y, start_x + width, start_y + height)
+    output_img = input_img.crop(box)
+    output_img.save(output_image +".png")
     
 def save_slice(i,output_path,img):
     plt.rcParams["figure.figsize"] = (20,15)

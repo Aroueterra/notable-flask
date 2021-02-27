@@ -54,9 +54,10 @@ def login():
 def test_output():
     app.logger.info('TEST: headers')
     app.logger.info(request.headers)
-    return send_from_directory(app.config['UPLOAD_FOLDER'],
-                               "archive.zip", as_attachment=True)
-    #return jsonify(success=1,error="none",error_type="")
+    app.logger.info('TEST: success')
+#     return send_from_directory(app.config['UPLOAD_FOLDER'],
+#                                "archive.zip", as_attachment=True)
+    return jsonify(success=1,error="none",error_type="")
 
 
 # MODEL PREDICTION
@@ -74,32 +75,40 @@ def predict():
         f = request.files['file']
         if f.filename == '':
             return "No selected file"
+        else:
+            app.logger.info("File: name = " + f.filename)
         if f and allowed_file(f.filename):
             app.logger.info('File: exists | Format: matching')
             start_time = time.time()
             try:
                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
                 img = Image.open(request.files['file'].stream).convert('RGB')
-            except Exception as e:
+            except Exception:
+                app.logger.error("ERROR: image input error")
+                app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 app.logger.error(traceback.format_exc())
                 return "Image input error"
             try:
                 np_img = np.array(img)
                 cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2BGR)
                 gry_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
-            except Exception as e:
+            except Exception:
+                app.logger.error("ERROR: conversion error")
+                app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 app.logger.error(traceback.format_exc())
                 return "Conversion error"
             try:
                 all_predictions = model.predict(gry_img)
             except Exception as e:
                 app.logger.error('ERROR: prediction exception' + str(e))
+                app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 return "Prediction error"
             try:
                 generateWAV(all_predictions, "false")
                 memory_file = compress('data/melody')
             except Exception as e:
                 app.logger.error('ERROR: audio exception'  + str(e))
+                app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 return "Audio/compression error"
             app.logger.info("All processes completed: " + str(time.time() - start_time) )
             #return 'Prediction: success'
@@ -109,7 +118,7 @@ def predict():
         else:
             app.logger.error('File: incompatible format')
     else:
-        app.logger.error('POST: failed')
+        app.logger.error('POST: failed, found get request')
     return 'Exiting the program, server did literally nothing'
 
 

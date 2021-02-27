@@ -18,7 +18,7 @@ import cv2
 import ctc_utils
 import os
 from pathlib import Path
-from config import logger
+from config import logger2
 
 tf_v1.compat.v1.disable_eager_execution()
 class ML:
@@ -60,14 +60,14 @@ class ML:
         
         start_time = time.time()
         segmented_staves = Slice(cv_img)   
-        logger.info("MODEL: sliced segments: " + str(time.time() - start_time))    
+        logger2.info("MODEL: sliced segments: " + str(time.time() - start_time))    
         file_name = segmented_staves[0].name.split('.')[-2]
         file_ext = str(segmented_staves[0]).split('.')[1]
         counter = 1
         all_predictions=[]
         current_file = segmented_staves[0]
         while current_file.exists():
-            logger.info("MODEL: song++ to playlist " + str(time.time() - start_time))    
+            logger2.info("MODEL: song++ to playlist " + str(time.time() - start_time))    
             file_name = str(current_file).split('.')[-2]
             image = cv2.imread(str(current_file),0)
             image = ctc_utils.resize(image, 128)
@@ -93,7 +93,7 @@ class ML:
             counter+=1
             
             all_predictions.append(parsed_predictions)
-            logger.info("MODEL: work completed " + str(time.time() - start_time))    
+            logger2.info("MODEL: work completed " + str(time.time() - start_time))    
         return all_predictions
     
         

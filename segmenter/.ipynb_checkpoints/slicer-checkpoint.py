@@ -70,6 +70,10 @@ def Slice(cv_img):
     for item in remove_dir:
         if item.endswith(".png") or item.endswith(".jpg") or item.endswith(".jpeg"):
             os.remove(os.path.join(delete_path, item))
+    remove_dir = os.listdir(zip_path1)
+    for item in remove_dir:
+        if item.endswith(".png") or item.endswith(".jpg") or item.endswith(".jpeg"):
+            os.remove(os.path.join(zip_path1, item))
     logging.info("SLICER: beginning cropping " + str(time.time() - start_time)) 
     for i, img in enumerate(imgs_with_staff):
         output_path = file_path+'slice'+str(i)+'.png'
