@@ -1,91 +1,165 @@
-2021-02-26 01:22:24,920 - app - INFO - All processes completed: 46.79438304901123
-2021-02-26 01:37:48,856 - app - INFO - POST: success
-2021-02-26 01:37:48,857 - app - INFO - # of files in request: 1
-2021-02-26 01:37:48,857 - app - INFO - Host: c727a3a40de7.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-03 22:31:04,038 - app - INFO - File: exists | Format: matching
+2021-03-03 22:32:28,273 - app - INFO - All processes completed: 84.21916508674622
+2021-03-04 14:16:58,046 - app - INFO - POST: success
+2021-03-04 14:16:58,087 - app - INFO - # of files in request: 1
+2021-03-04 14:16:58,087 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=55a03854-3908-44e1-b9ca-f7945ccfb3ad
-X-Forwarded-For: 2001:4451:ab7:e700:14c4:59a2:d000:aa27
+Content-Type: multipart/form-data; boundary=cec9cf3d-7989-47a3-936e-eb02a42b7df5
+X-Forwarded-For: 180.191.234.173
 X-Forwarded-Proto: https
 
 
-2021-02-26 01:37:48,857 - app - INFO - File: exists
-2021-02-26 01:37:48,858 - app - INFO - File: name = happybday_c.jpg
-2021-02-26 01:37:48,858 - app - INFO - File: exists | Format: matching
-2021-02-26 01:38:29,334 - app - INFO - All processes completed: 40.4729859828949
-2021-02-27 15:47:30,036 - app - INFO - POST: success
-2021-02-27 15:47:30,312 - app - INFO - # of files in request: 1
-2021-02-27 15:47:30,331 - app - INFO - Host: 7496b8e59ea5.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-04 14:16:58,087 - app - INFO - File: exists
+2021-03-04 14:16:58,087 - app - INFO - File: name = odetojoy.png
+2021-03-04 14:16:58,087 - app - INFO - File: exists | Format: matching
+2021-03-04 14:17:33,387 - app - INFO - All processes completed: 35.298505783081055
+2021-03-04 14:34:14,249 - app - INFO - POST: success
+2021-03-04 14:34:14,250 - app - INFO - # of files in request: 1
+2021-03-04 14:34:14,250 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=de283e9c-d991-43e8-83e9-2c74572fdd23
-X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+Content-Type: multipart/form-data; boundary=fba89d60-e15e-4cc7-9626-f22bbc957e45
+X-Forwarded-For: 180.191.234.173
 X-Forwarded-Proto: https
 
 
-2021-02-27 15:47:30,331 - app - INFO - File: exists
-2021-02-27 15:47:30,331 - app - INFO - File: name = happybday_c.jpg
-2021-02-27 15:47:30,384 - app - INFO - File: exists | Format: matching
-2021-02-27 15:48:27,685 - app - INFO - All processes completed: 57.300058364868164
-2021-02-27 16:32:03,973 - app - INFO - POST: success
-2021-02-27 16:32:03,975 - app - INFO - # of files in request: 1
-2021-02-27 16:32:03,975 - app - INFO - Host: 7496b8e59ea5.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-04 14:34:14,250 - app - INFO - File: exists
+2021-03-04 14:34:14,250 - app - INFO - File: name = odetojoy.png
+2021-03-04 14:34:14,250 - app - INFO - File: exists | Format: matching
+2021-03-04 14:36:04,867 - app - INFO - All processes completed: 110.6156051158905
+2021-03-04 14:37:46,744 - app - INFO - POST: success
+2021-03-04 14:37:46,745 - app - INFO - # of files in request: 1
+2021-03-04 14:37:46,745 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 26207
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=fcf70286-b99b-4402-80ba-f35b073755cf
-X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+Content-Type: multipart/form-data; boundary=272fc3d6-44d6-4db6-b2a0-b0ab7f684321
+X-Forwarded-For: 180.191.234.173
 X-Forwarded-Proto: https
 
 
-2021-02-27 16:32:03,975 - app - INFO - File: exists
-2021-02-27 16:32:03,975 - app - INFO - File: name = happybday_c.jpg
-2021-02-27 16:32:03,976 - app - INFO - File: exists | Format: matching
-2021-02-27 16:33:00,130 - app - INFO - All processes completed: 56.15405011177063
-2021-02-27 16:42:36,517 - app - INFO - POST: success
-2021-02-27 16:42:36,517 - app - INFO - # of files in request: 1
-2021-02-27 16:42:36,517 - app - INFO - Host: 7496b8e59ea5.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-04 14:37:46,745 - app - INFO - File: exists
+2021-03-04 14:37:46,745 - app - INFO - File: name = happybday.PNG
+2021-03-04 14:37:46,745 - app - INFO - File: exists | Format: matching
+2021-03-04 14:38:24,760 - app - INFO - All processes completed: 38.01538109779358
+2021-03-04 14:53:52,351 - app - INFO - POST: success
+2021-03-04 14:53:52,352 - app - INFO - # of files in request: 1
+2021-03-04 14:53:52,352 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=679247f9-fe0e-4c9a-a68f-f7d2a8cbcbf8
-X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+Content-Type: multipart/form-data; boundary=aa17e8e5-9d3c-4d3b-864a-80b7def7d366
+X-Forwarded-For: 2001:4451:a2f:fc00:549a:e775:4b80:2d10
 X-Forwarded-Proto: https
 
 
-2021-02-27 16:42:36,517 - app - INFO - File: exists
-2021-02-27 16:42:36,517 - app - INFO - File: name = happybday_c.jpg
-2021-02-27 16:42:36,517 - app - INFO - File: exists | Format: matching
-2021-02-27 16:44:21,242 - app - INFO - All processes completed: 104.72476053237915
-2021-02-27 18:19:11,133 - app - INFO - POST: success
-2021-02-27 18:19:11,230 - app - INFO - # of files in request: 1
-2021-02-27 18:19:11,237 - app - INFO - Host: 7496b8e59ea5.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-04 14:53:52,352 - app - INFO - File: exists
+2021-03-04 14:53:52,352 - app - INFO - File: name = odetojoy.png
+2021-03-04 14:53:52,352 - app - INFO - File: exists | Format: matching
+2021-03-04 14:54:02,964 - app - INFO - POST: success
+2021-03-04 14:54:02,964 - app - INFO - # of files in request: 1
+2021-03-04 14:54:02,964 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=9b7103d6-f390-42c2-8479-ef0b166c66a4
-X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+Content-Type: multipart/form-data; boundary=28a1ab6c-5de7-49c4-94b4-77eac797c70f
+X-Forwarded-For: 180.191.234.173
 X-Forwarded-Proto: https
 
 
-2021-02-27 18:19:11,237 - app - INFO - File: exists
-2021-02-27 18:19:11,237 - app - INFO - File: name = happybday_c.jpg
-2021-02-27 18:19:11,304 - app - INFO - File: exists | Format: matching
-2021-02-27 18:21:01,801 - app - INFO - All processes completed: 110.49706697463989
-2021-02-27 18:28:33,781 - app - INFO - POST: success
-2021-02-27 18:28:33,781 - app - INFO - # of files in request: 1
-2021-02-27 18:28:33,782 - app - INFO - Host: 7496b8e59ea5.ngrok.io
-User-Agent: okhttp/4.9.0
-Content-Length: 566759
+2021-03-04 14:54:02,964 - app - INFO - File: exists
+2021-03-04 14:54:02,965 - app - INFO - File: name = odetojoy.png
+2021-03-04 14:54:02,965 - app - INFO - File: exists | Format: matching
+2021-03-04 14:55:16,373 - app - ERROR - ERROR: prediction exceptioncannot identify image file 'C:\\Users\\aroue\\Downloads\\Documents\\@ML\\notable-flask\\data\\melody\\slice1.png'
+2021-03-04 14:55:16,726 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 101, in predict
+    all_predictions = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 61, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    crop(zipped_path)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 49, in crop
+    with Image.open(path) as img:
+  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'C:\\Users\\aroue\\Downloads\\Documents\\@ML\\notable-flask\\data\\melody\\slice1.png'
+
+2021-03-04 14:55:38,654 - app - INFO - POST: success
+2021-03-04 14:55:38,654 - app - INFO - # of files in request: 1
+2021-03-04 14:55:38,655 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
 Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=480d4e62-26fb-4de8-aac8-efefadba24bf
-X-Forwarded-For: 2001:4451:a06:7200:dc03:f650:afc1:9f52
+Content-Type: multipart/form-data; boundary=820e9472-2b7d-488b-86a9-fc9b175bb5cf
+X-Forwarded-For: 2001:4451:a2f:fc00:549a:e775:4b80:2d10
 X-Forwarded-Proto: https
 
 
-2021-02-27 18:28:33,782 - app - INFO - File: exists
-2021-02-27 18:28:33,787 - app - INFO - File: name = happybday_c.jpg
-2021-02-27 18:28:33,787 - app - INFO - File: exists | Format: matching
-2021-02-27 18:29:36,418 - app - INFO - All processes completed: 62.631587743759155
+2021-03-04 14:55:38,655 - app - INFO - File: exists
+2021-03-04 14:55:38,655 - app - INFO - File: name = odetojoy.png
+2021-03-04 14:55:38,655 - app - INFO - File: exists | Format: matching
+2021-03-04 14:58:58,321 - app - INFO - All processes completed: 295.30594515800476
+2021-03-04 15:00:26,578 - app - INFO - All processes completed: 287.9228775501251
+2021-03-04 15:09:10,615 - app - INFO - POST: success
+2021-03-04 15:09:10,616 - app - INFO - # of files in request: 1
+2021-03-04 15:09:10,616 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=94212cbc-140f-4e5c-8368-9314269418ee
+X-Forwarded-For: 2001:4451:a2f:fc00:549a:e775:4b80:2d10
+X-Forwarded-Proto: https
+
+
+2021-03-04 15:09:10,616 - app - INFO - File: exists
+2021-03-04 15:09:10,616 - app - INFO - File: name = odetojoy.png
+2021-03-04 15:09:10,616 - app - INFO - File: exists | Format: matching
+2021-03-04 15:11:24,449 - app - INFO - All processes completed: 133.83258700370789
+2021-03-04 15:17:52,370 - app - INFO - POST: success
+2021-03-04 15:17:52,370 - app - INFO - # of files in request: 1
+2021-03-04 15:17:52,370 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=c891e320-81e5-4960-8085-d58083fa8196
+X-Forwarded-For: 180.191.234.173
+X-Forwarded-Proto: https
+
+
+2021-03-04 15:17:52,370 - app - INFO - File: exists
+2021-03-04 15:17:52,371 - app - INFO - File: name = odetojoy.png
+2021-03-04 15:17:52,371 - app - INFO - File: exists | Format: matching
+2021-03-04 15:19:24,358 - app - INFO - All processes completed: 91.9864251613617
+2021-03-04 15:35:33,965 - app - INFO - POST: success
+2021-03-04 15:35:33,966 - app - INFO - # of files in request: 1
+2021-03-04 15:35:33,966 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 544510
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=23231f0d-a58b-4282-979c-71bf0fa15801
+X-Forwarded-For: 180.191.234.173
+X-Forwarded-Proto: https
+
+
+2021-03-04 15:35:33,967 - app - INFO - File: exists
+2021-03-04 15:35:33,967 - app - INFO - File: name = odetojoy.png
+2021-03-04 15:35:33,967 - app - INFO - File: exists | Format: matching
+2021-03-04 15:37:59,905 - app - INFO - All processes completed: 145.9382665157318
+2021-03-04 20:30:23,191 - app - INFO - POST: success
+2021-03-04 20:30:23,592 - app - INFO - # of files in request: 1
+2021-03-04 20:30:23,709 - app - INFO - Host: 683001192fc0.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 900848
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=858146a8-acfa-4872-8abe-f0645e69344a
+X-Forwarded-For: 180.191.234.173
+X-Forwarded-Proto: https
+
+
+2021-03-04 20:30:23,709 - app - INFO - File: exists
+2021-03-04 20:30:23,709 - app - INFO - File: name = pgws.png
+2021-03-04 20:30:23,780 - app - INFO - File: exists | Format: matching
+2021-03-04 20:34:26,099 - app - INFO - All processes completed: 242.27523159980774

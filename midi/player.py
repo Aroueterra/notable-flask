@@ -70,7 +70,7 @@ def get_music_note(semantic):
         no_freq= ["A#6","A6","B#6","B6","C#6","C6","D#6","D6","E#6","E6","F#6","F6","G#6","G6","Eb6"]
         no_sharp= ["A","B","C","D","E","F","G"]
         matching = [s for s in notes if any(xs in s for xs in no_freq)]
-        print(notes)
+        #print(notes)
         #if all(name in FREQ for  in notes):
         if(matching):  
             for n, item in enumerate(notes):

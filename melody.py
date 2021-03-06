@@ -10,9 +10,8 @@ from pathlib import Path
 from midi.player import *
 from scipy.io.wavfile import write as WAV
 import tensorflow.python.util.deprecation as deprecation
-logging.basicConfig(filename='logs/melody.log', level=logging.DEBUG)
 def generateWAV(all_predictions, merged):
-    logging.basicConfig(filename='logs/ml.log', level=logging.DEBUG)
+    logging.basicConfig(filename='logs/melody.log', level=logging.DEBUG)
     SEMANTIC = ''
     playlist = []
     track = 0
@@ -29,9 +28,9 @@ def generateWAV(all_predictions, merged):
     all_predictions = [x for x in all_predictions if x.strip()]
     logging.info("SYMBOL: printing all predictions")   
     logging.info(all_predictions)   
-    all_txt = ''.join(map(str, all_predictions))
-    with open(directory + 'all_predictions'+'.txt', 'w') as file:
-        file.write(all_txt)
+#     all_txt = ''.join(map(str, all_predictions))
+#     with open(directory + 'all_predictions'+'.txt', 'w') as file:
+#         file.write(all_txt)
     try:
         for SEMANTIC in all_predictions:
             if SEMANTIC:

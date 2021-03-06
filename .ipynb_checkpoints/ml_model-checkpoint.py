@@ -57,9 +57,8 @@ class ML:
         return self.session
     
     def predict(self, cv_img):
-        
         start_time = time.time()
-        segmented_staves = Slice(cv_img)   
+        segmented_staves = Slice(cv_img)  
         logger2.info("MODEL: sliced segments: " + str(time.time() - start_time))    
         file_name = segmented_staves[0].name.split('.')[-2]
         file_ext = str(segmented_staves[0]).split('.')[1]
@@ -91,7 +90,6 @@ class ML:
                 valid_path, valid_name = os.path.split(segmented_staves[counter-1])
                 current_file = Path(valid_path + '\\invalid.png' )
             counter+=1
-            
             all_predictions.append(parsed_predictions)
             logger2.info("MODEL: work completed " + str(time.time() - start_time))    
         return all_predictions

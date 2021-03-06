@@ -42,19 +42,17 @@ def Slice(cv_img):
             ret, mat = binarize_image(img_buffer)
             with Image(blob=mat) as timg:
                 imgf = mat
-                #timg.save(filename="otsu.jpg")
                 timg.deskew(0.4*im.quantum_range)
-                #timg.save(filename="otsu2.jpg")
                 imgf = np.array(timg)
                 img_buffer = np.asarray(bytearray(timg.make_blob("JPEG")), dtype=np.uint8)
-                imgmat = cv2.imdecode(img_buffer, cv2.IMREAD_UNCHANGED)
+                imgmat = cv2.imdecode(img_buffer, cv2.IMREAD_GRAYSCALE)
     except cv2.error as e:
         logging.error(traceback.format_exc())   
         logging.error("CV: read error")
         return
-        
+    cv2.imwrite('test2.jpg', imgmat)
     logging.info("SLICER: beginning segmentation " + str(time.time() - start_time)) 
-    imgmat = get_thresholded(imgmat, 245)
+    imgmat = get_thresholded(imgmat, threshold_otsu(imgmat))
     segmenter = Segmenter(imgmat)
     imgs_with_staff = segmenter.regions_with_staff
     show_images([imgs_with_staff[0]])
@@ -78,13 +76,13 @@ def Slice(cv_img):
     for i, img in enumerate(imgs_with_staff):
         output_path = file_path+'slice'+str(i)+'.png'
         zipped_path = zip_path+'slice'+str(i)+'.png'
-        save_slice(i, zipped_path, img)
         save_slice(i, output_path, img)
+        
+        save_slice(i, zipped_path, img)
         logging.info("SLICER: image++ in outputs " + str(time.time() - start_time)) 
         crop(output_path)
         crop(zipped_path)
         segmented_staves.append(Path(output_path))
-
     logging.info("SLICER: work completed " + str(time.time() - start_time)) 
     return segmented_staves
 

@@ -90,15 +90,19 @@ def predict():
                 return "Image input error"
             try:
                 np_img = np.array(img)
-                cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2BGR)
-                gry_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
-            except Exception:
+                print(np_img.shape)
+#                 gry_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
+                cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2GRAY)
+                save = np.array(cv_img)
+                cv2.imwrite('test0.jpg', save)
+                #gry_img = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
+            except Exception as e:
                 app.logger.error("ERROR: conversion error")
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 app.logger.error(traceback.format_exc())
                 return "Conversion error"
             try:
-                all_predictions = model.predict(gry_img)
+                all_predictions = model.predict(cv_img)
             except Exception as e:
                 app.logger.error('ERROR: prediction exception' + str(e))
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))

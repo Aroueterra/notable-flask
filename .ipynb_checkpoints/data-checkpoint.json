@@ -1,0 +1,1404 @@
+{
+    "gracenote": {
+        "name": "gracenote: ",
+        "definition": "placeholder",
+        "type": {
+            "A2": {
+                "name": "A2",
+                "definition": "A2 has a frequency of 110Hz"
+            },
+            "A#3": {
+                "name": "A#3",
+                "definition": "A#3 has a frequency of 233Hz"
+            },
+            "A3": {
+                "name": "A3",
+                "definition": "A3 has a frequency of 220Hz"
+            },
+            "A#4": {
+                "name": "A#4",
+                "definition": "A#4 has a frequency of 466Hz"
+            },
+            "A4": {
+                "name": "A4",
+                "definition": "A4 has a frequency of 440Hz"
+            },
+            "A#5": {
+                "name": "A#5",
+                "definition": "A#5 has a frequency of 932Hz"
+            },
+            "A5": {
+                "name": "A5",
+                "definition": "A5 has a frequency of 880Hz"
+            },
+            "Ab3": {
+                "name": "Ab3",
+                "definition": "Ab3 has a frequency of 208Hz"
+            },
+            "Ab4": {
+                "name": "Ab4",
+                "definition": "Ab4 has a frequency of 415Hz"
+            },
+            "Ab5": {
+                "name": "Ab5",
+                "definition": "Ab5 has a frequency of 830Hz"
+            },
+            "B2": {
+                "name": "B2",
+                "definition": "B2 has a frequency of 123Hz"
+            },
+            "B3": {
+                "name": "B3",
+                "definition": "B3 has a frequency of 246Hz"
+            },
+            "B#3": {
+                "name": "B#3",
+                "definition": "B#3 has a frequency of 130Hz"
+            },
+            "B#4": {
+                "name": "B#4",
+                "definition": "B#4 has a frequency of 261Hz"
+            },
+            "B4": {
+                "name": "B4",
+                "definition": "B4 has a frequency of 493Hz"
+            },
+            "B5": {
+                "name": "B5",
+                "definition": "B5 has a frequency of 987Hz"
+            },
+            "Bb3": {
+                "name": "Bb3",
+                "definition": "Bb3 has a frequency of 233Hz"
+            },
+            "Bb4": {
+                "name": "Bb4",
+                "definition": "Bb4 has a frequency of 466Hz"
+            },
+            "Bb5": {
+                "name": "Bb5",
+                "definition": "Bb5 has a frequency of 932Hz"
+            },
+            "C#3": {
+                "name": "C#3",
+                "definition": "C#3 has a frequency of 138Hz"
+            },
+            "C3": {
+                "name": "C3",
+                "definition": "C3 has a frequency of 130Hz"
+            },
+            "C#4": {
+                "name": "C#4",
+                "definition": "C#4 has a frequency of 277Hz"
+            },
+            "C4": {
+                "name": "C4",
+                "definition": "C4 has a frequency of 261Hz"
+            },
+            "C#5": {
+                "name": "C#5",
+                "definition": "C#5 has a frequency of 554Hz"
+            },
+            "C5": {
+                "name": "C5",
+                "definition": "C5 has a frequency of 523Hz"
+            },
+            "Cb5": {
+                "name": "Cb5",
+                "definition": "Cb5 has a frequency of 987Hz"
+            },
+            "D3": {
+                "name": "D3",
+                "definition": "D3 has a frequency of 146Hz"
+            },
+            "D#3": {
+                "name": "D#3",
+                "definition": "D#3 has a frequency of 155Hz"
+            },
+            "D#4": {
+                "name": "D#4",
+                "definition": "D#4 has a frequency of 311Hz"
+            },
+            "D4": {
+                "name": "D4",
+                "definition": "D4 has a frequency of 293Hz"
+            },
+            "D#5": {
+                "name": "D#5",
+                "definition": "D#5 has a frequency of 622Hz"
+            },
+            "D5": {
+                "name": "D5",
+                "definition": "D5 has a frequency of 587Hz"
+            },
+            "Db4": {
+                "name": "Db4",
+                "definition": "Db4 has a frequency of 277Hz"
+            },
+            "Db5": {
+                "name": "Db5",
+                "definition": "Db5 has a frequency of 554Hz"
+            },
+            "E3": {
+                "name": "E3",
+                "definition": "E3 has a frequency of 164Hz"
+            },
+            "E#4": {
+                "name": "E#4",
+                "definition": "E#4 has a frequency of 349Hz"
+            },
+            "E4": {
+                "name": "E4",
+                "definition": "E4 has a frequency of 329Hz"
+            },
+            "E#5": {
+                "name": "E#5",
+                "definition": "E#5 has a frequency of 698Hz"
+            },
+            "E5": {
+                "name": "E5",
+                "definition": "E5 has a frequency of 659Hz"
+            },
+            "Eb3": {
+                "name": "Eb3",
+                "definition": "Eb3 has a frequency of 155Hz"
+            },
+            "Eb4": {
+                "name": "Eb4",
+                "definition": "Eb4 has a frequency of 311Hz"
+            },
+            "Eb5": {
+                "name": "Eb5",
+                "definition": "Eb5 has a frequency of 659Hz"
+            },
+            "F2": {
+                "name": "F2",
+                "definition": "F2 has a frequency of 87Hz"
+            },
+            "F#2": {
+                "name": "F#2",
+                "definition": "F#2 has a frequency of 92Hz"
+            },
+            "F#3": {
+                "name": "F#3",
+                "definition": "F#3 has a frequency of 185Hz"
+            },
+            "F3": {
+                "name": "F3",
+                "definition": "F3 has a frequency of 174Hz"
+            },
+            "F#4": {
+                "name": "F#4",
+                "definition": "F#4 has a frequency of 369Hz"
+            },
+            "F4": {
+                "name": "F4",
+                "definition": "F4 has a frequency of 349Hz"
+            },
+            "F#5": {
+                "name": "F#5",
+                "definition": "F#5 has a frequency of 739Hz"
+            },
+            "F5": {
+                "name": "F5",
+                "definition": "F5 has a frequency of 698Hz"
+            },
+            "G#3": {
+                "name": "G#3",
+                "definition": "G#3 has a frequency of 208Hz"
+            },
+            "G3": {
+                "name": "G3",
+                "definition": "G3 has a frequency of 196Hz"
+            },
+            "G#4": {
+                "name": "G#4",
+                "definition": "G#4 has a frequency of 415Hz"
+            },
+            "G4": {
+                "name": "G4",
+                "definition": "G4 has a frequency of 392Hz"
+            },
+            "G#5": {
+                "name": "G#5",
+                "definition": "G#5 has a frequency of 830Hz"
+            },
+            "G5": {
+                "name": "G5",
+                "definition": "G5 has a frequency of 784Hz"
+            },
+            "Gb4": {
+                "name": "Gb4",
+                "definition": "Gb4 has a frequency of 369Hz"
+            },
+            "Gb5": {
+                "name": "Gb5",
+                "definition": "Gb5 has a frequency of 739Hz"
+            }
+        }
+    },
+    "note": {
+        "name": "note: ",
+        "definition": "placeholder",
+        "type": {
+            "A1": {
+                "name": "A1",
+                "definition": "A1 has a frequency of 55Hz"
+            },
+            "A2": {
+                "name": "A2",
+                "definition": "A2 has a frequency of 110Hz"
+            },
+            "A#2": {
+                "name": "A#2",
+                "definition": "A#2 has a frequency of 116Hz"
+            },
+            "A3": {
+                "name": "A3",
+                "definition": "A3 has a frequency of 220Hz"
+            },
+            "A#3": {
+                "name": "A#3",
+                "definition": "A#3 has a frequency of 233Hz"
+            },
+            "A4": {
+                "name": "A4",
+                "definition": "A4 has a frequency of 440Hz"
+            },
+            "A#4": {
+                "name": "A#4",
+                "definition": "A#4 has a frequency of 466Hz"
+            },
+            "A5": {
+                "name": "A5",
+                "definition": "A5 has a frequency of 880Hz"
+            },
+            "A#5": {
+                "name": "A#5",
+                "definition": "A#5 has a frequency of 932Hz"
+            },
+            "Ab2": {
+                "name": "Ab2",
+                "definition": "Ab2 has a frequency of 104Hz"
+            },
+            "Ab3": {
+                "name": "Ab3",
+                "definition": "Ab3 has a frequency of 208Hz"
+            },
+            "Ab4": {
+                "name": "Ab4",
+                "definition": "Ab4 has a frequency of 415Hz"
+            },
+            "Ab5": {
+                "name": "Ab5",
+                "definition": "Ab5 has a frequency of 830Hz"
+            },
+            "B1": {
+                "name": "B1",
+                "definition": "B1 has a frequency of 61Hz"
+            },
+            "B2": {
+                "name": "B2",
+                "definition": "B2 has a frequency of 123Hz"
+            },
+            "B#2": {
+                "name": "B#2",
+                "definition": "B#2 has a frequency of 65Hz"
+            },
+            "B#3": {
+                "name": "B#3",
+                "definition": "B#3 has a frequency of 130Hz"
+            },
+            "B3": {
+                "name": "B3",
+                "definition": "B3 has a frequency of 246Hz"
+            },
+            "B#4": {
+                "name": "B#4",
+                "definition": "B#4 has a frequency of 261Hz"
+            },
+            "B4": {
+                "name": "B4",
+                "definition": "B4 has a frequency of 493Hz"
+            },
+            "B5": {
+                "name": "B5",
+                "definition": "B5 has a frequency of 987Hz"
+            },
+            "B#5": {
+                "name": "B#5",
+                "definition": "B#5 has a frequency of 523Hz"
+            },
+            "Bb1": {
+                "name": "Bb1",
+                "definition": "Bb1 has a frequency of 58Hz"
+            },
+            "Bb2": {
+                "name": "Bb2",
+                "definition": "Bb2 has a frequency of 116Hz"
+            },
+            "Bb3": {
+                "name": "Bb3",
+                "definition": "Bb3 has a frequency of 233Hz"
+            },
+            "Bb4": {
+                "name": "Bb4",
+                "definition": "Bb4 has a frequency of 466Hz"
+            },
+            "Bb5": {
+                "name": "Bb5",
+                "definition": "Bb5 has a frequency of 932Hz"
+            },
+            "C2": {
+                "name": "C2",
+                "definition": "C2 has a frequency of 65Hz"
+            },
+            "C#2": {
+                "name": "C#2",
+                "definition": "C#2 has a frequency of 69Hz"
+            },
+            "C#3": {
+                "name": "C#3",
+                "definition": "C#3 has a frequency of 138Hz"
+            },
+            "C3": {
+                "name": "C3",
+                "definition": "C3 has a frequency of 130Hz"
+            },
+            "C4": {
+                "name": "C4",
+                "definition": "C4 has a frequency of 261Hz"
+            },
+            "C#4": {
+                "name": "C#4",
+                "definition": "C#4 has a frequency of 277Hz"
+            },
+            "C#5": {
+                "name": "C#5",
+                "definition": "C#5 has a frequency of 554Hz"
+            },
+            "C5": {
+                "name": "C5",
+                "definition": "C5 has a frequency of 523Hz"
+            },
+            "C#6": {
+                "name": "C#6",
+                "definition": "C#6 has a frequency of 1108.73Hz"
+            },
+            "C6": {
+                "name": "C6",
+                "definition": "C6 has a frequency of 1046.5Hz"
+            },
+            "Cb3": {
+                "name": "Cb3",
+                "definition": "Cb3 has a frequency of 246Hz"
+            },
+            "Cb4": {
+                "name": "Cb4",
+                "definition": "Cb4 has a frequency of 493Hz"
+            },
+            "Cb5": {
+                "name": "Cb5",
+                "definition": "Cb5 has a frequency of 987Hz"
+            },
+            "Cb6": {
+                "name": "Cb6",
+                "definition": "Cb6 has a frequency of 1046.5Hz"
+            },
+            "D2": {
+                "name": "D2",
+                "definition": "D2 has a frequency of 73Hz"
+            },
+            "D#2": {
+                "name": "D#2",
+                "definition": "D#2 has a frequency of 77Hz"
+            },
+            "D3": {
+                "name": "D3",
+                "definition": "D3 has a frequency of 146Hz"
+            },
+            "D#3": {
+                "name": "D#3",
+                "definition": "D#3 has a frequency of 155Hz"
+            },
+            "D4": {
+                "name": "D4",
+                "definition": "D4 has a frequency of 293Hz"
+            },
+            "D#4": {
+                "name": "D#4",
+                "definition": "D#4 has a frequency of 311Hz"
+            },
+            "D#5": {
+                "name": "D#5",
+                "definition": "D#5 has a frequency of 622Hz"
+            },
+            "D5": {
+                "name": "D5",
+                "definition": "D5 has a frequency of 587Hz"
+            },
+            "D#6": {
+                "name": "D#6",
+                "definition": "D#6 has a frequency of 1244.51Hz"
+            },
+            "D6": {
+                "name": "D6",
+                "definition": "D6 has a frequency of 1174.66Hz"
+            },
+            "Db3": {
+                "name": "Db3",
+                "definition": "Db3 has a frequency of 138Hz"
+            },
+            "Db4": {
+                "name": "Db4",
+                "definition": "Db4 has a frequency of 277Hz"
+            },
+            "Db5": {
+                "name": "Db5",
+                "definition": "Db5 has a frequency of 554Hz"
+            },
+            "Db6": {
+                "name": "Db6",
+                "definition": "Db6 has a frequency of 1174.66Hz"
+            },
+            "E2": {
+                "name": "E2",
+                "definition": "E2 has a frequency of 82Hz"
+            },
+            "E#2": {
+                "name": "E#2",
+                "definition": "E#2 has a frequency of 87Hz"
+            },
+            "E3": {
+                "name": "E3",
+                "definition": "E3 has a frequency of 164Hz"
+            },
+            "E#3": {
+                "name": "E#3",
+                "definition": "E#3 has a frequency of 174Hz"
+            },
+            "E4": {
+                "name": "E4",
+                "definition": "E4 has a frequency of 329Hz"
+            },
+            "E#4": {
+                "name": "E#4",
+                "definition": "E#4 has a frequency of 349Hz"
+            },
+            "E5": {
+                "name": "E5",
+                "definition": "E5 has a frequency of 659Hz"
+            },
+            "E#5": {
+                "name": "E#5",
+                "definition": "E#5 has a frequency of 698Hz"
+            },
+            "E6": {
+                "name": "E6",
+                "definition": "E6 has a frequency of 1318.51Hz"
+            },
+            "E#6": {
+                "name": "E#6",
+                "definition": "E#6 has a frequency of 1046.5Hz"
+            },
+            "Eb2": {
+                "name": "Eb2",
+                "definition": "Eb2 has a frequency of 77Hz"
+            },
+            "Eb3": {
+                "name": "Eb3",
+                "definition": "Eb3 has a frequency of 155Hz"
+            },
+            "Eb4": {
+                "name": "Eb4",
+                "definition": "Eb4 has a frequency of 311Hz"
+            },
+            "Eb5": {
+                "name": "Eb5",
+                "definition": "Eb5 has a frequency of 659Hz"
+            },
+            "Eb6": {
+                "name": "Eb6",
+                "definition": "Eb6 has a frequency of 1244.51Hz"
+            },
+            "F2": {
+                "name": "F2",
+                "definition": "F2 has a frequency of 87Hz"
+            },
+            "F#2": {
+                "name": "F#2",
+                "definition": "F#2 has a frequency of 92Hz"
+            },
+            "F#3": {
+                "name": "F#3",
+                "definition": "F#3 has a frequency of 185Hz"
+            },
+            "F3": {
+                "name": "F3",
+                "definition": "F3 has a frequency of 174Hz"
+            },
+            "F#4": {
+                "name": "F#4",
+                "definition": "F#4 has a frequency of 369Hz"
+            },
+            "F4": {
+                "name": "F4",
+                "definition": "F4 has a frequency of 349Hz"
+            },
+            "F#5": {
+                "name": "F#5",
+                "definition": "F#5 has a frequency of 739Hz"
+            },
+            "F5": {
+                "name": "F5",
+                "definition": "F5 has a frequency of 698Hz"
+            },
+            "F#6": {
+                "name": "F#6",
+                "definition": "F#6 has a frequency of 1479.98Hz"
+            },
+            "F6": {
+                "name": "F6",
+                "definition": "F6 has a frequency of 1396.91Hz"
+            },
+            "Fb3": {
+                "name": "Fb3",
+                "definition": "Fb3 has a frequency of 164Hz"
+            },
+            "Fb4": {
+                "name": "Fb4",
+                "definition": "Fb4 has a frequency of 329Hz"
+            },
+            "Fb5": {
+                "name": "Fb5",
+                "definition": "Fb5 has a frequency of 659Hz"
+            },
+            "G2": {
+                "name": "G2",
+                "definition": "G2 has a frequency of 98Hz"
+            },
+            "G#2": {
+                "name": "G#2",
+                "definition": "G#2 has a frequency of 104Hz"
+            },
+            "G3": {
+                "name": "G3",
+                "definition": "G3 has a frequency of 196Hz"
+            },
+            "G#3": {
+                "name": "G#3",
+                "definition": "G#3 has a frequency of 208Hz"
+            },
+            "G#4": {
+                "name": "G#4",
+                "definition": "G#4 has a frequency of 415Hz"
+            },
+            "G4": {
+                "name": "G4",
+                "definition": "G4 has a frequency of 392Hz"
+            },
+            "G5": {
+                "name": "G5",
+                "definition": "G5 has a frequency of 784Hz"
+            },
+            "G#5": {
+                "name": "G#5",
+                "definition": "G#5 has a frequency of 830Hz"
+            },
+            "Gb2": {
+                "name": "Gb2",
+                "definition": "Gb2 has a frequency of 92Hz"
+            },
+            "Gb3": {
+                "name": "Gb3",
+                "definition": "Gb3 has a frequency of 185Hz"
+            },
+            "Gb4": {
+                "name": "Gb4",
+                "definition": "Gb4 has a frequency of 369Hz"
+            },
+            "Gb5": {
+                "name": "Gb5",
+                "definition": "Gb5 has a frequency of 739Hz"
+            }
+        }
+    },
+    "clef": {
+        "name": "clef: ",
+        "definition": "placeholder",
+        "type": {
+            "C1": {
+                "name": "C1",
+                "definition": "definition of C1"
+            },
+            "C2": {
+                "name": "C2",
+                "definition": "definition of C2"
+            },
+            "C3": {
+                "name": "C3",
+                "definition": "definition of C3"
+            },
+            "C4": {
+                "name": "C4",
+                "definition": "definition of C4"
+            },
+            "C5": {
+                "name": "C5",
+                "definition": "definition of C5"
+            },
+            "F3": {
+                "name": "F3",
+                "definition": "definition of F3"
+            },
+            "F4": {
+                "name": "F4",
+                "definition": "definition of F4"
+            },
+            "F5": {
+                "name": "F5",
+                "definition": "definition of F5"
+            },
+            "G1": {
+                "name": "G1",
+                "definition": "definition of G1"
+            },
+            "G2": {
+                "name": "G2",
+                "definition": "definition of G2"
+            }
+        }
+    },
+    "barline": {
+        "name": "Barline: ",
+        "definition": "placeholder"
+    },
+    "tie": {
+        "name": "Tie: ",
+        "definition": "placeholder"
+    },
+    "keySignature": {
+        "name": "keySignature: ",
+        "definition": "placeholder",
+        "type": {
+            "AbM": {
+                "name": "AbM",
+                "definition": "A flat major"
+            },
+            "AM": {
+                "name": "AM",
+                "definition": "A major"
+            },
+            "BbM": {
+                "name": "BbM",
+                "definition": "B flat major"
+            },
+            "BM": {
+                "name": "BM",
+                "definition": "B major"
+            },
+            "CM": {
+                "name": "CM",
+                "definition": "C major"
+            },
+            "C#M": {
+                "name": "C#M",
+                "definition": "C sharp major"
+            },
+            "DbM": {
+                "name": "DbM",
+                "definition": "D flat major"
+            },
+            "DM": {
+                "name": "DM",
+                "definition": "D major"
+            },
+            "EbM": {
+                "name": "EbM",
+                "definition": "E flat major"
+            },
+            "EM": {
+                "name": "EM",
+                "definition": "E major"
+            },
+            "FM": {
+                "name": "FM",
+                "definition": "F major"
+            },
+            "F#M": {
+                "name": "F#M",
+                "definition": "F sharp major"
+            },
+            "GbM": {
+                "name": "GbM",
+                "definition": "G flat major"
+            },
+            "GM": {
+                "name": "GM",
+                "definition": "G major"
+            }
+        }
+    },
+    "multirest": {
+        "name": "multirest: ",
+        "definition": "placeholder",
+        "type": {
+            "1": {
+                "name": "1",
+                "definition": "definition of 1"
+            },
+            "10": {
+                "name": "10",
+                "definition": "definition of 10"
+            },
+            "100": {
+                "name": "100",
+                "definition": "definition of 100"
+            },
+            "105": {
+                "name": "105",
+                "definition": "definition of 105"
+            },
+            "107": {
+                "name": "107",
+                "definition": "definition of 107"
+            },
+            "11": {
+                "name": "11",
+                "definition": "definition of 11"
+            },
+            "1111": {
+                "name": "1111",
+                "definition": "definition of 1111"
+            },
+            "112": {
+                "name": "112",
+                "definition": "definition of 112"
+            },
+            "115": {
+                "name": "115",
+                "definition": "definition of 115"
+            },
+            "119": {
+                "name": "119",
+                "definition": "definition of 119"
+            },
+            "12": {
+                "name": "12",
+                "definition": "definition of 12"
+            },
+            "123": {
+                "name": "123",
+                "definition": "definition of 123"
+            },
+            "124": {
+                "name": "124",
+                "definition": "definition of 124"
+            },
+            "126": {
+                "name": "126",
+                "definition": "definition of 126"
+            },
+            "128": {
+                "name": "128",
+                "definition": "definition of 128"
+            },
+            "13": {
+                "name": "13",
+                "definition": "definition of 13"
+            },
+            "14": {
+                "name": "14",
+                "definition": "definition of 14"
+            },
+            "143": {
+                "name": "143",
+                "definition": "definition of 143"
+            },
+            "15": {
+                "name": "15",
+                "definition": "definition of 15"
+            },
+            "16": {
+                "name": "16",
+                "definition": "definition of 16"
+            },
+            "164": {
+                "name": "164",
+                "definition": "definition of 164"
+            },
+            "17": {
+                "name": "17",
+                "definition": "definition of 17"
+            },
+            "18": {
+                "name": "18",
+                "definition": "definition of 18"
+            },
+            "19": {
+                "name": "19",
+                "definition": "definition of 19"
+            },
+            "193": {
+                "name": "193",
+                "definition": "definition of 193"
+            },
+            "2": {
+                "name": "2",
+                "definition": "definition of 2"
+            },
+            "20": {
+                "name": "20",
+                "definition": "definition of 20"
+            },
+            "21": {
+                "name": "21",
+                "definition": "definition of 21"
+            },
+            "22": {
+                "name": "22",
+                "definition": "definition of 22"
+            },
+            "225": {
+                "name": "225",
+                "definition": "definition of 225"
+            },
+            "23": {
+                "name": "23",
+                "definition": "definition of 23"
+            },
+            "24": {
+                "name": "24",
+                "definition": "definition of 24"
+            },
+            "25": {
+                "name": "25",
+                "definition": "definition of 25"
+            },
+            "26": {
+                "name": "26",
+                "definition": "definition of 26"
+            },
+            "27": {
+                "name": "27",
+                "definition": "definition of 27"
+            },
+            "28": {
+                "name": "28",
+                "definition": "definition of 28"
+            },
+            "29": {
+                "name": "29",
+                "definition": "definition of 29"
+            },
+            "3": {
+                "name": "3",
+                "definition": "definition of 3"
+            },
+            "30": {
+                "name": "30",
+                "definition": "definition of 30"
+            },
+            "31": {
+                "name": "31",
+                "definition": "definition of 31"
+            },
+            "32": {
+                "name": "32",
+                "definition": "definition of 32"
+            },
+            "33": {
+                "name": "33",
+                "definition": "definition of 33"
+            },
+            "34": {
+                "name": "34",
+                "definition": "definition of 34"
+            },
+            "35": {
+                "name": "35",
+                "definition": "definition of 35"
+            },
+            "36": {
+                "name": "36",
+                "definition": "definition of 36"
+            },
+            "37": {
+                "name": "37",
+                "definition": "definition of 37"
+            },
+            "38": {
+                "name": "38",
+                "definition": "definition of 38"
+            },
+            "39": {
+                "name": "39",
+                "definition": "definition of 39"
+            },
+            "4": {
+                "name": "4",
+                "definition": "definition of 4"
+            },
+            "40": {
+                "name": "40",
+                "definition": "definition of 40"
+            },
+            "41": {
+                "name": "41",
+                "definition": "definition of 41"
+            },
+            "42": {
+                "name": "42",
+                "definition": "definition of 42"
+            },
+            "43": {
+                "name": "43",
+                "definition": "definition of 43"
+            },
+            "44": {
+                "name": "44",
+                "definition": "definition of 44"
+            },
+            "45": {
+                "name": "45",
+                "definition": "definition of 45"
+            },
+            "46": {
+                "name": "46",
+                "definition": "definition of 46"
+            },
+            "47": {
+                "name": "47",
+                "definition": "definition of 47"
+            },
+            "48": {
+                "name": "48",
+                "definition": "definition of 48"
+            },
+            "49": {
+                "name": "49",
+                "definition": "definition of 49"
+            },
+            "5": {
+                "name": "5",
+                "definition": "definition of 5"
+            },
+            "50": {
+                "name": "50",
+                "definition": "definition of 50"
+            },
+            "51": {
+                "name": "51",
+                "definition": "definition of 51"
+            },
+            "52": {
+                "name": "52",
+                "definition": "definition of 52"
+            },
+            "53": {
+                "name": "53",
+                "definition": "definition of 53"
+            },
+            "54": {
+                "name": "54",
+                "definition": "definition of 54"
+            },
+            "55": {
+                "name": "55",
+                "definition": "definition of 55"
+            },
+            "56": {
+                "name": "56",
+                "definition": "definition of 56"
+            },
+            "57": {
+                "name": "57",
+                "definition": "definition of 57"
+            },
+            "58": {
+                "name": "58",
+                "definition": "definition of 58"
+            },
+            "59": {
+                "name": "59",
+                "definition": "definition of 59"
+            },
+            "6": {
+                "name": "6",
+                "definition": "definition of 6"
+            },
+            "60": {
+                "name": "60",
+                "definition": "definition of 60"
+            },
+            "63": {
+                "name": "63",
+                "definition": "definition of 63"
+            },
+            "64": {
+                "name": "64",
+                "definition": "definition of 64"
+            },
+            "65": {
+                "name": "65",
+                "definition": "definition of 65"
+            },
+            "66": {
+                "name": "66",
+                "definition": "definition of 66"
+            },
+            "67": {
+                "name": "67",
+                "definition": "definition of 67"
+            },
+            "68": {
+                "name": "68",
+                "definition": "definition of 68"
+            },
+            "69": {
+                "name": "69",
+                "definition": "definition of 69"
+            },
+            "7": {
+                "name": "7",
+                "definition": "definition of 7"
+            },
+            "70": {
+                "name": "70",
+                "definition": "definition of 70"
+            },
+            "71": {
+                "name": "71",
+                "definition": "definition of 71"
+            },
+            "72": {
+                "name": "72",
+                "definition": "definition of 72"
+            },
+            "73": {
+                "name": "73",
+                "definition": "definition of 73"
+            },
+            "76": {
+                "name": "76",
+                "definition": "definition of 76"
+            },
+            "77": {
+                "name": "77",
+                "definition": "definition of 77"
+            },
+            "79": {
+                "name": "79",
+                "definition": "definition of 79"
+            },
+            "8": {
+                "name": "8",
+                "definition": "definition of 8"
+            },
+            "80": {
+                "name": "80",
+                "definition": "definition of 80"
+            },
+            "81": {
+                "name": "81",
+                "definition": "definition of 81"
+            },
+            "88": {
+                "name": "88",
+                "definition": "definition of 88"
+            },
+            "89": {
+                "name": "89",
+                "definition": "definition of 89"
+            },
+            "9": {
+                "name": "9",
+                "definition": "definition of 9"
+            },
+            "91": {
+                "name": "91",
+                "definition": "definition of 91"
+            },
+            "94": {
+                "name": "94",
+                "definition": "definition of 94"
+            },
+            "96": {
+                "name": "96",
+                "definition": "definition of 96"
+            },
+            "98": {
+                "name": "98",
+                "definition": "definition of 98"
+            },
+            "99": {
+                "name": "99",
+                "definition": "definition of 99"
+            }
+        }
+    },
+    "rest": {
+        "name": "rest: ",
+        "definition": "placeholder",
+        "type": {
+            "eighth": {
+                "name": "eighth",
+                "definition": "definition of eighth"
+            },
+            "eighth.": {
+                "name": "eighth.",
+                "definition": "definition of eighth."
+            },
+            "eighth..": {
+                "name": "eighth..",
+                "definition": "definition of eighth.."
+            },
+            "eighth_fermata": {
+                "name": "eighth_fermata",
+                "definition": "definition of eighth_fermata"
+            },
+            "eighth._fermata": {
+                "name": "eighth._fermata",
+                "definition": "definition of eighth._fermata"
+            },
+            "half": {
+                "name": "half",
+                "definition": "definition of half"
+            },
+            "half.": {
+                "name": "half.",
+                "definition": "definition of half."
+            },
+            "half_fermata": {
+                "name": "half_fermata",
+                "definition": "definition of half_fermata"
+            },
+            "half._fermata": {
+                "name": "half._fermata",
+                "definition": "definition of half._fermata"
+            },
+            "quadruple_whole": {
+                "name": "quadruple_whole",
+                "definition": "definition of quadruple_whole"
+            },
+            "quarter": {
+                "name": "quarter",
+                "definition": "definition of quarter"
+            },
+            "quarter.": {
+                "name": "quarter.",
+                "definition": "definition of quarter."
+            },
+            "quarter..": {
+                "name": "quarter..",
+                "definition": "definition of quarter.."
+            },
+            "quarter_fermata": {
+                "name": "quarter_fermata",
+                "definition": "definition of quarter_fermata"
+            },
+            "quarter._fermata": {
+                "name": "quarter._fermata",
+                "definition": "definition of quarter._fermata"
+            },
+            "quarter.._fermata": {
+                "name": "quarter.._fermata",
+                "definition": "definition of quarter.._fermata"
+            },
+            "sixteenth": {
+                "name": "sixteenth",
+                "definition": "definition of sixteenth"
+            },
+            "sixteenth.": {
+                "name": "sixteenth.",
+                "definition": "definition of sixteenth."
+            },
+            "sixteenth_fermata": {
+                "name": "sixteenth_fermata",
+                "definition": "definition of sixteenth_fermata"
+            },
+            "sixty_fourth": {
+                "name": "sixty_fourth",
+                "definition": "definition of sixty_fourth"
+            },
+            "thirty_second": {
+                "name": "thirty_second",
+                "definition": "definition of thirty_second"
+            },
+            "whole": {
+                "name": "whole",
+                "definition": "definition of whole"
+            },
+            "whole.": {
+                "name": "whole.",
+                "definition": "definition of whole."
+            },
+            "whole_fermata": {
+                "name": "whole_fermata",
+                "definition": "definition of whole_fermata"
+            }
+        }
+    },
+    "timeSignature": {
+        "name": "timeSignature: ",
+        "definition": "placeholder",
+        "type": {
+            "11/4": {
+                "name": "11/4",
+                "definition": "11 instances of quarter(4) notes in each bar"
+            },
+            "1/2": {
+                "name": "1/2",
+                "definition": "12 instances of quarter(4) notes in each bar"
+            },
+            "12/16": {
+                "name": "12/16",
+                "definition": ""
+            },
+            "12/4": {
+                "name": "12/4",
+                "definition": "12 instances of quarter(4) notes in each bar"
+            },
+            "12/8": {
+                "name": "12/8",
+                "definition": "definition of 12/8"
+            },
+            "1/4": {
+                "name": "1/4",
+                "definition": "definition of 1/4"
+            },
+            "2/1": {
+                "name": "2/1",
+                "definition": "2 instances of whole(1) notes in each bar"
+            },
+            "2/2": {
+                "name": "2/2",
+                "definition": "2 instances of half(2) notes in each bar"
+            },
+            "2/3": {
+                "name": "2/3",
+                "definition": "one bar consists of two-thirds of a triplet of quarter note"
+            },
+            "2/4": {
+                "name": "2/4",
+                "definition": "2 instances of quarter(4) notes in each bar"
+            },
+            "24/16": {
+                "name": "24/16",
+                "definition": "24 instances of semiquaver(16) notes in each bar"
+            },
+            "2/48": {
+                "name": "2/48",
+                "definition": "definition of 2/48"
+            },
+            "2/8": {
+                "name": "2/8",
+                "definition": "2 instances of quaver(8) notes in each bar"
+            },
+            "3/1": {
+                "name": "3/1",
+                "definition": "3 instances of whole(1) notes in each bar"
+            },
+            "3/2": {
+                "name": "3/2",
+                "definition": "3 instances of half(2) notes in each bar"
+            },
+            "3/4": {
+                "name": "3/4",
+                "definition": "3 instances of quarter(4) notes in each bar"
+            },
+            "3/6": {
+                "name": "3/6",
+                "definition": "2 instances of half(2) notes in each bar"
+            },
+            "3/8": {
+                "name": "3/8",
+                "definition": "definition of 3/8"
+            },
+            "4/1": {
+                "name": "4/1",
+                "definition": "definition of 4/1"
+            },
+            "4/2": {
+                "name": "4/2",
+                "definition": "definition of 4/2"
+            },
+            "4/4": {
+                "name": "4/4",
+                "definition": "definition of 4/4"
+            },
+            "4/8": {
+                "name": "4/8",
+                "definition": "definition of 4/8"
+            },
+            "5/4": {
+                "name": "5/4",
+                "definition": "definition of 5/4"
+            },
+            "5/8": {
+                "name": "5/8",
+                "definition": "definition of 5/8"
+            },
+            "6/16": {
+                "name": "6/16",
+                "definition": "definition of 6/16"
+            },
+            "6/2": {
+                "name": "6/2",
+                "definition": "definition of 6/2"
+            },
+            "6/4": {
+                "name": "6/4",
+                "definition": "definition of 6/4"
+            },
+            "6/8": {
+                "name": "6/8",
+                "definition": "definition of 6/8"
+            },
+            "7/4": {
+                "name": "7/4",
+                "definition": "definition of 7/4"
+            },
+            "8/12": {
+                "name": "8/12",
+                "definition": "definition of 8/12"
+            },
+            "8/16": {
+                "name": "8/16",
+                "definition": "definition of 8/16"
+            },
+            "8/2": {
+                "name": "8/2",
+                "definition": "definition of 8/2"
+            },
+            "8/4": {
+                "name": "8/4",
+                "definition": "definition of 8/4"
+            },
+            "8/8": {
+                "name": "8/8",
+                "definition": "definition of 8/8"
+            },
+            "9/16": {
+                "name": "9/16",
+                "definition": "definition of 9/16"
+            },
+            "9/4": {
+                "name": "9/4",
+                "definition": "definition of 9/4"
+            },
+            "9/8": {
+                "name": "9/8",
+                "definition": ""
+            },
+            "C": {
+                "name": "C",
+                "definition": "definition of C"
+            },
+            "C/": {
+                "name": "C/",
+                "definition": "definition of C/"
+            }
+        }
+    }
+}

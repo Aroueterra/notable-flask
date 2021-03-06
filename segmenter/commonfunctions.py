@@ -1,18 +1,21 @@
-
+import os
 import cv2
+import shutil
+import numpy as np
 import skimage.io as io
 import matplotlib.pyplot as plt
-import numpy as np
-import shutil
-import os
-from skimage.exposure import histogram
+from wand.color import Color
+from PIL import Image, ImageChops
+from wand.image import Image as WI
 from matplotlib.pyplot import bar
-from skimage.color import rgb2gray
-from skimage.filters import threshold_otsu, gaussian, median
-from skimage.morphology import binary_opening, binary_closing, binary_dilation, binary_erosion, closing, opening, square, skeletonize, disk
 from skimage.feature import canny
 from skimage.transform import resize
-from PIL import Image, ImageChops
+from skimage.color import rgb2gray
+from skimage.exposure import histogram
+from skimage.filters import threshold_otsu, gaussian, median
+from skimage.morphology import binary_opening, binary_closing, binary_dilation, binary_erosion, closing, opening, square, skeletonize, disk
+
+
 
 def copy(src, dst):
     shutil.rmtree(dst + "\\melody")
@@ -22,9 +25,16 @@ def copy(src, dst):
 def crop_image(input_image, output_image, start_x, start_y, width, height):
     """Pass input name image, output name image, x coordinate to start croping, y coordinate to start croping, width to crop, height to crop """
     input_img = Image.open(input_image)
+    
+    
     box = (start_x, start_y, start_x + width, start_y + height)
-    output_img = input_img.crop(box)
-    output_img.save(output_image +".png")
+    cropped_img = input_img.crop(box)
+    
+    baseheight = 128
+    hpercent = (baseheight / float(cropped_img.size[1]))
+    wsize = int((float(cropped_img.size[0]) * float(hpercent)))
+    resized_img = cropped_img.resize((wsize, baseheight), Image.ANTIALIAS)    
+    resized_img.save(output_image +".png")
     
 def save_slice(i,output_path,img):
     plt.rcParams["figure.figsize"] = (20,15)
@@ -36,27 +46,20 @@ def save_slice(i,output_path,img):
     
 
 def crop(path):
-    #img = Image.fromarray(np.uint8(img))
-    img = Image.open(path)
-    #print(type(img))
-    pixels = img.load()
-    #print (f"original: {img.size[0]} x {img.size[1]}")
-    xlist = []
-    ylist = []
-    for y in range(0, img.size[1]):
-        for x in range(0, img.size[0]):
-            if pixels[x, y] != (255, 255, 255, 255):
-                xlist.append(x)
-                ylist.append(y)
-    left = min(xlist)
-    right = max(xlist)
-    top = min(ylist)
-    bottom = max(ylist)
-    img = img.crop((left-10, top-10, right+10, bottom+10))
-    #print (f"cropped: {img.size[0]} x {img.size[1]}")
-    img.save(path)
-    #img = np.asarray(img)
-
+    with Image.open(path) as img:
+        img_mat = np.asarray(img)
+        with WI.from_array(img_mat) as im:
+            im.trim(Color("WHITE"))
+            im.save(filename=path)
+    with Image.open(path) as cropped_img:
+        cropped_img = Image.open(path)
+        #print (f"cropped: {cropped_img.size[0]} x {cropped_img.size[1]}" + str(type(cropped_img)))
+        baseheight = 155
+        hpercent = (baseheight / float(cropped_img.size[1]))
+        wsize = int((float(cropped_img.size[0]) * float(hpercent)))
+        resized_img = cropped_img.resize((wsize, baseheight), Image.ANTIALIAS)    
+        #print (f"resized: {resized_img.size[0]} x {resized_img.size[1]}")
+        resized_img.save(path, quality=100)
 
 def binarize_image(img):
     mat = cv2.imdecode(img, cv2.IMREAD_UNCHANGED)
@@ -91,11 +94,6 @@ def show_images(images, titles=None):
         n += 1
     fig.set_size_inches(np.array(fig.get_size_inches()) * n_ims)
     
-    #plt.savefig(r'C:\Users\aroue\Downloads\Documents\@ML\Mozart\newout\foo.png', bbox_inches='tight')
-    #plt.show()
-    
-
-
 def showHist(img):
     plt.figure()
     imgHist = histogram(img, nbins=256)
@@ -132,6 +130,7 @@ def get_gray(img):
 
 def get_thresholded(img, thresh):
     return 1*(img > thresh)
+    
 
 
 def histogram(img, thresh):
