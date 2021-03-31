@@ -2,10 +2,25 @@ import os
 import cv2
 import time
 import shutil
+import logging
 import zipfile
 import numpy as np
 from io import BytesIO
 
+def setup_logger(logger_name, log_file, level=logging.INFO):
+    l = logging.getLogger(logger_name)
+    basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
+    log_file = basepath + log_file
+    formatter = logging.Formatter('%(asctime)s : %(message)s')
+    fileHandler = logging.FileHandler(log_file, mode='w')
+    fileHandler.setFormatter(formatter)
+    streamHandler = logging.StreamHandler()
+    streamHandler.setFormatter(formatter)
+    l.setLevel(level)
+    l.addHandler(fileHandler)
+    l.addHandler(streamHandler)   
+    return logging.getLogger(logger_name)
+    
 def sparse_tensor_to_strs(sparse_tensor):
     indices= sparse_tensor[0][0]
     values = sparse_tensor[0][1]

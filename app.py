@@ -88,10 +88,9 @@ def predict():
                 return "Image input error"
             try:
                 np_img = np.array(img)
-                #print(np_img.shape)
                 cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2GRAY)
                 save = np.array(cv_img)
-                cv2.imwrite('sent_image.jpg', save)
+                cv2.imwrite('logs/sent_image.jpg', save)
             except Exception as e:
                 app.logger.error("ERROR: conversion error")
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))

@@ -2,6 +2,7 @@ import os
 import cv2
 import shutil
 import numpy as np
+import io as byteio
 import skimage.io as io
 import matplotlib.pyplot as plt
 from wand.color import Color
@@ -46,6 +47,27 @@ def save_slice(i,output_path,img):
     
 
 def crop(path):
+    with Image.fromarray((path * 255).astype('uint8'), mode='L') as img:
+        img_mat = np.asarray(img)
+        #img.save("logs/check_black0.png", quality=100)        
+        with WI.from_array(img_mat) as wand_img:
+            wand_img.trim(Color("WHITE"))
+            #wand_img.save(filename="logs/check_black_wand.png")
+            cropped_img = Image.open(byteio.BytesIO(wand_img.make_blob("png")))
+            #cropped_img.save("logs/check_black1.png", quality=100)        
+            baseheight = 155
+            hpercent = (baseheight / float(cropped_img.size[1]))
+            wsize = int((float(cropped_img.size[0]) * float(hpercent)))
+            resized_img = cropped_img.resize((wsize, baseheight), Image.ANTIALIAS)    
+            #resized_img.save("logs/check_black2.png", quality=100)   
+            #print(len(resized_img.getbands()))
+            print('Pillow: ', resized_img.mode, resized_img.size)
+            #pil_img = Image.fromarray((resized_img * 255).astype('uint8'), mode='L')
+            #print (f"resized: {resized_img.size[0]} x {resized_img.size[1]}")
+            return resized_img
+
+def crop2(path):
+    Image.fromarray(np.uint8(path)).convert('L')
     with Image.open(path) as img:
         img_mat = np.asarray(img)
         with WI.from_array(img_mat) as im:
@@ -59,8 +81,8 @@ def crop(path):
         wsize = int((float(cropped_img.size[0]) * float(hpercent)))
         resized_img = cropped_img.resize((wsize, baseheight), Image.ANTIALIAS)    
         #print (f"resized: {resized_img.size[0]} x {resized_img.size[1]}")
-        resized_img.save(path, quality=100)
-
+        resized_img.save(path, quality=100)        
+        
 def binarize_image(img):
     mat = cv2.imdecode(img, cv2.IMREAD_UNCHANGED)
     ret3, bin_img = cv2.threshold(mat,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)

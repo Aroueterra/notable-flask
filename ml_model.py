@@ -13,6 +13,7 @@ import tensorflow as tf
 import tensorflow.compat.v1 as tf_v1
 from segmenter.slicer import Slice
 import config
+from PIL import Image, ImageChops
 from apputil import elements
 import cv2
 import ctc_utils
@@ -60,38 +61,33 @@ class ML:
         start_time = time.time()
         segmented_staves = Slice(cv_img)  
         logger2.info("MODEL: sliced segments: " + str(time.time() - start_time))    
-        file_name = segmented_staves[0].name.split('.')[-2]
-        file_ext = str(segmented_staves[0]).split('.')[1]
-        counter = 1
         all_predictions=[]
         current_file = segmented_staves[0]
-        while current_file.exists():
-            logger2.info("MODEL: song++ to playlist " + str(time.time() - start_time))    
-            file_name = str(current_file).split('.')[-2]
-            image = cv2.imread(str(current_file),0)
-            image = ctc_utils.resize(image, 128)
-            image = ctc_utils.normalize(image)
-            image = np.asarray(image).reshape(1,image.shape[0],-1,1)
-            seq_lengths = [ image.shape[2] / self.WIDTH_REDUCTION ]
-            prediction = self.session.run(self.decoded,
-                              feed_dict={
-                                  self.input: image,
-                                  self.seq_len: seq_lengths,
-                                  self.rnn_keep_prob: 1.0,
-                              })
-            str_predictions = ctc_utils.sparse_tensor_to_strs(prediction)
-            
-            parsed_predictions = ''
-            for w in str_predictions[0]:
-                parsed_predictions += self.int2word[w] + '\n' 
-            if counter < len(segmented_staves):
-                current_file = segmented_staves[counter]
-            else:
-                valid_path, valid_name = os.path.split(segmented_staves[counter-1])
-                current_file = Path(valid_path + '\\invalid.png' )
-            counter+=1
-            all_predictions.append(parsed_predictions)
-            logger2.info("MODEL: work completed " + str(time.time() - start_time))    
+        for i, img in enumerate(segmented_staves):
+            logger2.info("MODEL: predicting segment" + str(time.time() - start_time))   
+            opencv_image = np.array(img) 
+            print('OpenCV: ', opencv_image.shape)
+            # Convert GRY to BGR 
+            with Image.fromarray((opencv_image * 255).astype('uint8'), mode='L') as img:
+                image = cv2.cvtColor(np.float32(img), cv2.COLOR_GRAY2BGR)
+                #cv2.imwrite('proto_BGR.jpg', image)
+                image = ctc_utils.resize(image, 128)
+                image = ctc_utils.normalize(image)
+                image = np.asarray(image).reshape(1,image.shape[0],-1,1)
+                seq_lengths = [ image.shape[2] / self.WIDTH_REDUCTION ]
+                prediction = self.session.run(self.decoded,
+                                  feed_dict={
+                                      self.input: image,
+                                      self.seq_len: seq_lengths,
+                                      self.rnn_keep_prob: 1.0,
+                                  })
+                str_predictions = ctc_utils.sparse_tensor_to_strs(prediction)            
+                parsed_predictions = ''
+                for w in str_predictions[0]:
+                    parsed_predictions += self.int2word[w] + '\n' 
+
+                all_predictions.append(parsed_predictions)
+                logger2.info("MODEL: work completed " + str(time.time() - start_time))    
         return all_predictions
     
         

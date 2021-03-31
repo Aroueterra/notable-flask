@@ -1,8 +1,138 @@
-2021-03-23 16:16:16,998 - app - ERROR - ERROR: prediction exceptiontile cannot extend outside image
-2021-03-23 16:16:17,576 - app - ERROR - Traceback (most recent call last):
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\ImageFile.py", line 510, in _save
-    fh = fp.fileno()
-AttributeError: '_idat' object has no attribute 'fileno'
+2021-03-30 12:27:30,305 - app - INFO - Host: 71df7bb904c0.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 570804
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryS27HBGDNfGHZQcyR
+Origin: https://71df7bb904c0.ngrok.io
+Referer: https://71df7bb904c0.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:9852:a335:7027:6eb5
+X-Forwarded-Proto: https
+
+
+2021-03-30 12:27:30,361 - app - INFO - File: exists
+2021-03-30 12:27:30,361 - app - INFO - File: name = happybday_c.jpg
+2021-03-30 12:27:30,362 - app - INFO - File: exists | Format: matching
+2021-03-30 12:27:34,095 - app - ERROR - ERROR: prediction exceptionExpected Ptr<cv::UMat> for argument 'src'
+2021-03-30 12:27:34,176 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 101, in predict
+    all_predictions = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 78, in predict
+    color_coverted = cv2.cvtColor(opencv_image, cv2.COLOR_RGB2BGR)
+TypeError: Expected Ptr<cv::UMat> for argument 'src'
+
+2021-03-30 13:17:20,333 - app - INFO - POST: success
+2021-03-30 13:17:20,380 - app - INFO - # of files in request: 1
+2021-03-30 13:17:20,381 - app - INFO - Host: 72a8c75a0316.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 570558
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryOPcbb9wAs6Fzuxb2
+Origin: https://72a8c75a0316.ngrok.io
+Referer: https://72a8c75a0316.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:9852:a335:7027:6eb5
+X-Forwarded-Proto: https
+
+
+2021-03-30 13:17:20,381 - app - INFO - File: exists
+2021-03-30 13:17:20,381 - app - INFO - File: name = happybday2.jpg
+2021-03-30 13:17:20,381 - app - INFO - File: exists | Format: matching
+2021-03-30 13:17:26,744 - app - ERROR - ERROR: prediction exceptionname 'img_pil' is not defined
+2021-03-30 13:17:27,300 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 101, in predict
+    all_predictions = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 61, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 78, in Slice
+    segmented_staves.append(crop(img))
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 64, in crop
+    print('Pillow: ', img_pil.mode, img_pil.size)
+NameError: name 'img_pil' is not defined
+
+2021-03-30 13:27:52,010 - app - INFO - POST: success
+2021-03-30 13:27:52,116 - app - INFO - # of files in request: 1
+2021-03-30 13:27:52,116 - app - INFO - Host: 416617b2ccd7.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 570804
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarynx7k4dQb5RjSH3eH
+Origin: https://416617b2ccd7.ngrok.io
+Referer: https://416617b2ccd7.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:9852:a335:7027:6eb5
+X-Forwarded-Proto: https
+
+
+2021-03-30 13:27:52,117 - app - INFO - File: exists
+2021-03-30 13:27:52,117 - app - INFO - File: name = happybday_c.jpg
+2021-03-30 13:27:52,117 - app - INFO - File: exists | Format: matching
+2021-03-30 13:27:58,513 - app - ERROR - ERROR: prediction exceptionExpected Ptr<cv::UMat> for argument 'src'
+2021-03-30 13:27:58,575 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 101, in predict
+    all_predictions = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 80, in predict
+    color_coverted = cv2.cvtColor(opencv_image, cv2.COLOR_RGB2BGR)
+TypeError: Expected Ptr<cv::UMat> for argument 'src'
+
+2021-03-30 13:39:26,060 - app - INFO - POST: success
+2021-03-30 13:39:26,195 - app - INFO - # of files in request: 1
+2021-03-30 13:39:26,195 - app - INFO - Host: c78cedbcfcd8.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 570558
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryV5CIZVZbvM3dvWOu
+Origin: https://c78cedbcfcd8.ngrok.io
+Referer: https://c78cedbcfcd8.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:9852:a335:7027:6eb5
+X-Forwarded-Proto: https
+
+
+2021-03-30 13:39:26,195 - app - INFO - File: exists
+2021-03-30 13:39:26,195 - app - INFO - File: name = happybday2.jpg
+2021-03-30 13:39:26,195 - app - INFO - File: exists | Format: matching
+2021-03-30 13:39:33,146 - app - ERROR - ERROR: prediction exceptionconversion from L to RBG not supported
+2021-03-30 13:39:33,440 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 1015, in convert
+    im = self.im.convert(mode, dither)
+ValueError: conversion from 1 to RBG not supported
 
 During handling of the above exception, another exception occurred:
 
@@ -11,180 +141,47 @@ Traceback (most recent call last):
     all_predictions = model.predict(cv_img)
   File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 61, in predict
     segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in Slice
-    show_images([imgs_with_staff[0]])
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 90, in show_images
-    plt.imsave('test.png', image, cmap = plt.cm.gray)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\matplotlib\pyplot.py", line 2251, in imsave
-    return matplotlib.image.imsave(fname, arr, **kwargs)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\matplotlib\image.py", line 1605, in imsave
-    image.save(fname, **pil_kwargs)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 2151, in save
-    save_handler(self, fp, filename)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\PngImagePlugin.py", line 1339, in _save
-    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\ImageFile.py", line 518, in _save
-    e.setimage(im.im, b)
-SystemError: tile cannot extend outside image
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 78, in Slice
+    segmented_staves.append(crop(img))
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 67, in crop
+    return resized_img.convert('RBG')
+  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 1020, in convert
+    im = im.convert(mode, dither)
+ValueError: conversion from L to RBG not supported
 
-2021-03-23 16:16:24,681 - app - INFO - POST: success
-2021-03-23 16:16:24,681 - app - INFO - # of files in request: 1
-2021-03-23 16:16:24,681 - app - INFO - Host: 5b0426543b04.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 11764
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=fc711aeb-9e39-44a0-84f5-28f4b79b0a33
-X-Forwarded-For: 136.158.31.103
+2021-03-30 13:54:28,734 - app - INFO - POST: success
+2021-03-30 13:54:28,795 - app - INFO - # of files in request: 1
+2021-03-30 13:54:28,795 - app - INFO - Host: 2e351e964587.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 570558
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryxuqsAADoXlZjB5KB
+Origin: https://2e351e964587.ngrok.io
+Referer: https://2e351e964587.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:9852:a335:7027:6eb5
 X-Forwarded-Proto: https
 
 
-2021-03-23 16:16:24,681 - app - INFO - File: exists
-2021-03-23 16:16:24,682 - app - INFO - File: name = images (1).png
-2021-03-23 16:16:24,682 - app - INFO - File: exists | Format: matching
-2021-03-23 16:16:25,457 - app - ERROR - ERROR: prediction exceptiontile cannot extend outside image
-2021-03-23 16:16:25,458 - app - ERROR - Traceback (most recent call last):
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\ImageFile.py", line 510, in _save
-    fh = fp.fileno()
-AttributeError: '_idat' object has no attribute 'fileno'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
+2021-03-30 13:54:28,810 - app - INFO - File: exists
+2021-03-30 13:54:28,810 - app - INFO - File: name = happybday2.jpg
+2021-03-30 13:54:28,810 - app - INFO - File: exists | Format: matching
+2021-03-30 13:54:34,350 - app - ERROR - ERROR: prediction exceptionExpected Ptr<cv::UMat> for argument 'src'
+2021-03-30 13:54:34,426 - app - ERROR - Traceback (most recent call last):
   File "app.py", line 101, in predict
     all_predictions = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 61, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in Slice
-    show_images([imgs_with_staff[0]])
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 90, in show_images
-    plt.imsave('test.png', image, cmap = plt.cm.gray)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\matplotlib\pyplot.py", line 2251, in imsave
-    return matplotlib.image.imsave(fname, arr, **kwargs)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\matplotlib\image.py", line 1605, in imsave
-    image.save(fname, **pil_kwargs)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 2151, in save
-    save_handler(self, fp, filename)
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\PngImagePlugin.py", line 1339, in _save
-    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\ImageFile.py", line 518, in _save
-    e.setimage(im.im, b)
-SystemError: tile cannot extend outside image
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 82, in predict
+    color_coverted = cv2.cvtColor(opencv_image, cv2.COLOR_GRAY2BGR)
+TypeError: Expected Ptr<cv::UMat> for argument 'src'
 
-2021-03-23 16:19:29,931 - app - INFO - POST: success
-2021-03-23 16:19:29,931 - app - INFO - # of files in request: 1
-2021-03-23 16:19:29,932 - app - INFO - Host: 5b0426543b04.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 38343
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=00841eaf-9c86-4be9-a0d4-0ce02f342ae1
-X-Forwarded-For: 136.158.31.103
-X-Forwarded-Proto: https
-
-
-2021-03-23 16:19:29,932 - app - INFO - File: exists
-2021-03-23 16:19:29,932 - app - INFO - File: name = 20210323_162044.png
-2021-03-23 16:19:29,932 - app - INFO - File: exists | Format: matching
-2021-03-23 16:22:23,791 - app - INFO - POST: success
-2021-03-23 16:22:23,792 - app - INFO - # of files in request: 1
-2021-03-23 16:22:23,792 - app - INFO - Host: 5b0426543b04.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 571029
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=7a45ed75-9df2-4d1a-8fb6-a4d55978b940
-X-Forwarded-For: 152.32.98.230
-X-Forwarded-Proto: https
-
-
-2021-03-23 16:22:23,792 - app - INFO - File: exists
-2021-03-23 16:22:23,792 - app - INFO - File: name = happybday_c.jpg
-2021-03-23 16:22:23,792 - app - INFO - File: exists | Format: matching
-2021-03-23 16:22:30,346 - app - ERROR - ERROR: prediction exception[Errno 2] No such file or directory: 'C:\\Users\\aroue\\Downloads\\Documents\\@ML\\notable-flask\\segmenter\\output\\slice3.png'
-2021-03-23 16:22:30,519 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 101, in predict
-    all_predictions = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 61, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 83, in Slice
-    crop(output_path)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\commonfunctions.py", line 49, in crop
-    with Image.open(path) as img:
-  File "C:\Users\aroue\anaconda3\lib\site-packages\PIL\Image.py", line 2891, in open
-    fp = builtins.open(filename, "rb")
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\aroue\\Downloads\\Documents\\@ML\\notable-flask\\segmenter\\output\\slice3.png'
-
-2021-03-23 16:22:46,549 - app - INFO - POST: success
-2021-03-23 16:22:46,550 - app - INFO - # of files in request: 1
-2021-03-23 16:22:46,550 - app - INFO - Host: 5b0426543b04.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 38343
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=e9c5de4d-a688-4dca-b3ca-24eb23880802
-X-Forwarded-For: 136.158.31.103
-X-Forwarded-Proto: https
-
-
-2021-03-23 16:22:46,550 - app - INFO - File: exists
-2021-03-23 16:22:46,551 - app - INFO - File: name = 20210323_162044.png
-2021-03-23 16:22:46,551 - app - INFO - File: exists | Format: matching
-2021-03-23 18:05:35,773 - app - INFO - POST: success
-2021-03-23 18:05:36,028 - app - INFO - # of files in request: 1
-2021-03-23 18:05:36,029 - app - INFO - Host: 1a614995fe27.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 544510
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=f8ab278c-c8ed-4ae8-90c8-487261d4f8c8
-X-Forwarded-For: 130.105.224.142
-X-Forwarded-Proto: https
-
-
-2021-03-23 18:05:36,029 - app - INFO - File: exists
-2021-03-23 18:05:36,029 - app - INFO - File: name = odetojoy.png
-2021-03-23 18:05:36,506 - app - INFO - File: exists | Format: matching
-2021-03-23 18:06:21,649 - app - INFO - All processes completed: 45.14270520210266
-2021-03-23 18:09:34,637 - app - INFO - POST: success
-2021-03-23 18:09:34,637 - app - INFO - # of files in request: 1
-2021-03-23 18:09:34,637 - app - INFO - Host: 1a614995fe27.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 544510
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=bcfdb696-7a37-4f13-92ec-1cee199ee8f6
-X-Forwarded-For: 130.105.224.142
-X-Forwarded-Proto: https
-
-
-2021-03-23 18:09:34,638 - app - INFO - File: exists
-2021-03-23 18:09:34,638 - app - INFO - File: name = odetojoy.png
-2021-03-23 18:09:34,638 - app - INFO - File: exists | Format: matching
-2021-03-23 18:11:20,624 - app - INFO - All processes completed: 105.98681092262268
-2021-03-23 18:22:27,180 - app - INFO - POST: success
-2021-03-23 18:22:27,180 - app - INFO - # of files in request: 1
-2021-03-23 18:22:27,181 - app - INFO - Host: 1a614995fe27.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 544510
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=25e14538-ac67-4e28-ba0f-9eb45d28a637
-X-Forwarded-For: 130.105.224.142
-X-Forwarded-Proto: https
-
-
-2021-03-23 18:22:27,181 - app - INFO - File: exists
-2021-03-23 18:22:27,181 - app - INFO - File: name = odetojoy.png
-2021-03-23 18:22:27,181 - app - INFO - File: exists | Format: matching
-2021-03-23 18:24:08,967 - app - INFO - All processes completed: 101.78561687469482
-2021-03-23 18:29:15,251 - app - INFO - POST: success
-2021-03-23 18:29:15,252 - app - INFO - # of files in request: 1
-2021-03-23 18:29:15,252 - app - INFO - Host: 1a614995fe27.ngrok.io
-User-Agent: okhttp/5.0.0-alpha.2
-Content-Length: 26207
-Accept-Encoding: gzip
-Content-Type: multipart/form-data; boundary=8ab43af0-f71c-4a1d-8713-c7e9ac6fc81f
-X-Forwarded-For: 2001:4451:ac3:af00:4cf3:e0cc:97f8:c76e
-X-Forwarded-Proto: https
-
-
-2021-03-23 18:29:15,252 - app - INFO - File: exists
-2021-03-23 18:29:15,252 - app - INFO - File: name = happybday.PNG
-2021-03-23 18:29:15,252 - app - INFO - File: exists | Format: matching
-2021-03-23 18:29:51,860 - app - INFO - All processes completed: 36.60816669464111
-2021-03-23 18:37:38,417 - app - INFO - POST: success
-2021-03-23 18:37:38,417 - app - INFO - # of files in request: 1
+2021-03-30 14:00:51,083 - app - INFO - POST: success
+2021-03-30 14:00:51,152 - app - INFO - # of files in request: 1
