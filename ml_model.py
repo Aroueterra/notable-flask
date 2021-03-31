@@ -14,13 +14,13 @@ import tensorflow.compat.v1 as tf_v1
 from segmenter.slicer import Slice
 import config
 from PIL import Image, ImageChops
-from apputil import elements
+from apputil import elements, setup_logger
 import cv2
 import ctc_utils
 import os
 from pathlib import Path
 from config import logger2
-
+log = setup_logger('model', r'\logs\model.log')
 tf_v1.compat.v1.disable_eager_execution()
 class ML:
     model = ''
@@ -60,17 +60,18 @@ class ML:
     def predict(self, cv_img):
         start_time = time.time()
         segmented_staves = Slice(cv_img)  
-        logger2.info("MODEL: sliced segments: " + str(time.time() - start_time))    
+        log.info("MODEL: sliced segments: " + str(time.time() - start_time))    
         all_predictions=[]
         current_file = segmented_staves[0]
         for i, img in enumerate(segmented_staves):
-            logger2.info("MODEL: predicting segment" + str(time.time() - start_time))   
+            log.info("MODEL: predicting segment" + str(time.time() - start_time))   
             opencv_image = np.array(img) 
-            print('OpenCV: ', opencv_image.shape)
+            #print('OpenCV: ', opencv_image.shape)
             # Convert GRY to BGR 
             with Image.fromarray((opencv_image * 255).astype('uint8'), mode='L') as img:
                 image = cv2.cvtColor(np.float32(img), cv2.COLOR_GRAY2BGR)
-                #cv2.imwrite('proto_BGR.jpg', image)
+                np_img = np.array(image)
+                image = cv2.cvtColor(np_img, cv2.COLOR_BGR2GRAY)
                 image = ctc_utils.resize(image, 128)
                 image = ctc_utils.normalize(image)
                 image = np.asarray(image).reshape(1,image.shape[0],-1,1)
@@ -87,8 +88,8 @@ class ML:
                     parsed_predictions += self.int2word[w] + '\n' 
 
                 all_predictions.append(parsed_predictions)
-                logger2.info("MODEL: work completed " + str(time.time() - start_time))    
-        return all_predictions
+                log.info("MODEL: work completed " + str(time.time() - start_time))    
+        return all_predictions, segmented_staves
     
         
         

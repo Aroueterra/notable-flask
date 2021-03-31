@@ -49,20 +49,14 @@ def save_slice(i,output_path,img):
 def crop(path):
     with Image.fromarray((path * 255).astype('uint8'), mode='L') as img:
         img_mat = np.asarray(img)
-        #img.save("logs/check_black0.png", quality=100)        
         with WI.from_array(img_mat) as wand_img:
             wand_img.trim(Color("WHITE"))
-            #wand_img.save(filename="logs/check_black_wand.png")
             cropped_img = Image.open(byteio.BytesIO(wand_img.make_blob("png")))
-            #cropped_img.save("logs/check_black1.png", quality=100)        
             baseheight = 155
             hpercent = (baseheight / float(cropped_img.size[1]))
             wsize = int((float(cropped_img.size[0]) * float(hpercent)))
             resized_img = cropped_img.resize((wsize, baseheight), Image.ANTIALIAS)    
-            #resized_img.save("logs/check_black2.png", quality=100)   
-            #print(len(resized_img.getbands()))
-            print('Pillow: ', resized_img.mode, resized_img.size)
-            #pil_img = Image.fromarray((resized_img * 255).astype('uint8'), mode='L')
+            #print('Pillow: ', resized_img.mode, resized_img.size)
             #print (f"resized: {resized_img.size[0]} x {resized_img.size[1]}")
             return resized_img
 

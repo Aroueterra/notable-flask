@@ -12,7 +12,7 @@ from ml_model import ML
 from PIL import ImageFont
 from PIL import ImageDraw
 import silence_tensorflow.auto
-from melody import generateWAV
+from melody import generate_WAV
 from segmenter.slicer import Slice
 from flask_ngrok import run_with_ngrok
 from logging.handlers import RotatingFileHandler
@@ -97,20 +97,19 @@ def predict():
                 app.logger.error(traceback.format_exc())
                 return "Conversion error"
             try:
-                all_predictions = model.predict(cv_img)
+                all_predictions, segmented_staves = model.predict(cv_img)
             except Exception as e:
                 app.logger.error('ERROR: prediction exception' + str(e))
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 return "Prediction error"
             try:
-                generateWAV(all_predictions, "false")
-                memory_file = compress('data/melody')
+                text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+                memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
             except Exception as e:
                 app.logger.error('ERROR: audio exception'  + str(e))
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 return "Audio/compression error"
             app.logger.info("All processes completed: " + str(time.time() - start_time) )
-            #return 'Prediction: success'
             return send_file(memory_file,
                     attachment_filename='archive.zip',
                     as_attachment=True)
@@ -127,7 +126,7 @@ def uploaded_file(filename):
                                filename)
 
 if __name__=="__main__":
-    handler = RotatingFileHandler('logs/app.log', maxBytes=10000, backupCount=1) 
+    handler = RotatingFileHandler('logs/all_errors.log', maxBytes=10000, backupCount=1) 
     handler.setLevel(logging.DEBUG)
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     handler.setFormatter(formatter)

@@ -1,6 +1,6 @@
 import logging
-logging.basicConfig(filename='logs/ml.log', level=logging.DEBUG)
-logger2 = logging.getLogger('ML_MODEL')
+logging.basicConfig(filename='logs/app.log', level=logging.DEBUG)
+logger2 = logging.getLogger('app')
 
 voc_file = "vocabulary_semantic.txt"
 model = "semantic_model/semantic_model.meta"

@@ -7,18 +7,18 @@ import zipfile
 import numpy as np
 from io import BytesIO
 
-def setup_logger(logger_name, log_file, level=logging.INFO):
+def setup_logger(logger_name, log_file, level=logging.DEBUG):
     l = logging.getLogger(logger_name)
     basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
     log_file = basepath + log_file
     formatter = logging.Formatter('%(asctime)s : %(message)s')
     fileHandler = logging.FileHandler(log_file, mode='w')
     fileHandler.setFormatter(formatter)
-    streamHandler = logging.StreamHandler()
-    streamHandler.setFormatter(formatter)
+    #streamHandler = logging.StreamHandler()
+    #streamHandler.setFormatter(formatter)
     l.setLevel(level)
     l.addHandler(fileHandler)
-    l.addHandler(streamHandler)   
+    #l.addHandler(streamHandler)   
     return logging.getLogger(logger_name)
     
 def sparse_tensor_to_strs(sparse_tensor):
@@ -69,23 +69,31 @@ def compress2(file_name):
     memory_file.seek(0)
     return send_file(memory_file, attachment_filename='capsule.zip', as_attachment=True)
 
-def compress(file):
-    file_path = file
+def compress(fullsong_file, text_files, song_files, segmented_staves):
+    #rootdir = os.path.basename(file_path)
     memory_file = BytesIO()
-    rootdir = os.path.basename(file_path)
     with zipfile.ZipFile(memory_file, 'w', zipfile.ZIP_DEFLATED) as zipf:
-          for root, dirs, files in os.walk(file_path):
-                    for file in files:
-                        # Write the file named filename to the archive,
-                        # giving it the archive name 'arcname'.
-                        filepath   = os.path.join(root, file)
-                        parentpath = os.path.relpath(filepath, file_path)
-                        #arcname    = os.path.join(rootdir, parentpath)
-
-                        zipf.write(filepath, file)
-                        #zipf.write(os.path.join(root, file))
-                              #zipf.write(os.path.join(root, file))
-                            
+        txt_ctr = song_ctr = img_ctr = 0
+        #Full_song
+        zipf.writestr('full_song.wav', fullsong_file[0].getvalue())
+        #Predictions
+        for txt in text_files:
+            file_name = f'predictions{str(txt_ctr)}.txt'
+            zipf.writestr(file_name, BytesIO(txt).getvalue())
+            txt_ctr+=1
+        #Staff_song
+        for song in song_files:
+            file_name = f'staff{str(song_ctr)}.wav'
+            zipf.writestr(file_name, song.getvalue())
+            song_ctr+=1
+        #Staff_images
+        for img in segmented_staves:
+            img_byte = BytesIO()
+            img.save(img_byte, format='PNG')
+            file_name = f'slice{str(img_ctr)}.png'
+            zipf.writestr(file_name, img_byte.getvalue())
+            img_ctr+=1
     memory_file.seek(0)
     return memory_file
+    
     

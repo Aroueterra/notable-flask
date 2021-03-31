@@ -1,0 +1,30 @@
+2021-03-31 15:30:33,914 - app - INFO - File: name = happybday_c.jpg
+2021-03-31 15:30:34,016 - app - INFO - File: exists | Format: matching
+2021-03-31 15:30:38,295 - app - INFO - All processes completed: 4.278501510620117
+2021-03-31 15:43:52,213 - app - INFO - POST: success
+2021-03-31 15:43:52,233 - app - INFO - # of files in request: 1
+2021-03-31 15:43:52,234 - app - INFO - Host: 9364a603f1ff.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 870207
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1C9egqjJ7lItCT6p
+Origin: https://9364a603f1ff.ngrok.io
+Referer: https://9364a603f1ff.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
+X-Forwarded-Proto: https
+
+
+2021-03-31 15:43:52,234 - app - INFO - File: exists
+2021-03-31 15:43:52,234 - app - INFO - File: name = holynight_c.png
+2021-03-31 15:43:52,234 - app - INFO - File: exists | Format: matching
+2021-03-31 15:44:05,334 - app - INFO - All processes completed: 13.10050082206726

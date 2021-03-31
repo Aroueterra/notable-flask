@@ -1,5 +1,6 @@
 import os
 import io
+from io import BytesIO
 import time
 import traceback
 import logging
@@ -10,9 +11,8 @@ from pathlib import Path
 from midi.player import *
 from scipy.io.wavfile import write as WAV
 import tensorflow.python.util.deprecation as deprecation
-logging.basicConfig(filename='logs/melody.log', level=logging.DEBUG)
-def generateWAV(all_predictions, merged):
-    logging.basicConfig(filename='logs/ml.log', level=logging.DEBUG)
+def generate_WAV(all_predictions, merged):
+    logging.basicConfig(filename='logs/melody.log', level=logging.DEBUG)
     SEMANTIC = ''
     playlist = []
     track = 0
@@ -28,10 +28,10 @@ def generateWAV(all_predictions, merged):
             os.remove(os.path.join(delete_str, item))
     all_predictions = [x for x in all_predictions if x.strip()]
     logging.info("SYMBOL: printing all predictions")   
-    logging.info(all_predictions)   
-    all_txt = ''.join(map(str, all_predictions))
-    with open(directory + 'all_predictions'+'.txt', 'w') as file:
-        file.write(all_txt)
+    text_files = []
+    song_files = []
+    fullsong_file = []
+    temp_file=BytesIO()
     try:
         for SEMANTIC in all_predictions:
             if SEMANTIC:
@@ -44,8 +44,7 @@ def generateWAV(all_predictions, merged):
                 #converts it to 16 bits
                 audio = audio.astype(np.int16)
                 playlist.append(audio)
-                with open(directory + 'predictions'+ str(export) +'.txt', 'w') as file:
-                    file.write(SEMANTIC)
+                text_files.append(str.encode(SEMANTIC))
                 export+=1        
     except Exception as e:
         logging.error(traceback.format_exc())   
@@ -58,21 +57,23 @@ def generateWAV(all_predictions, merged):
                     WAV(output_file, 44100, song)
                     track+=1
             else:
-                output_file = directory + "full_song" + '.wav'
+                fullsong_bytes = BytesIO()
                 full_song = None
                 for song in playlist:
-                    small_file = directory + 'staff' + str(track) + '.wav'
-                    WAV(small_file, 44100, song)
+                    song_bytes = BytesIO()
+                    WAV(song_bytes, 44100, song)
+                    song_files.append(song_bytes)
                     track+=1
                     if (full_song) is None:
                         full_song = song
                     else:
                         full_song = np.concatenate((full_song, song))
-
-                WAV(output_file, 44100, full_song)
+                WAV(fullsong_bytes, 44100, full_song)
+                fullsong_file.append(fullsong_bytes)
     except Exception as e:
         logging.error(traceback.format_exc())   
         logging.error("AUDIO: could not generate sinewave audio")
+    return text_files, fullsong_file, song_files
 
 
 
