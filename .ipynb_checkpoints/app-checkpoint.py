@@ -11,6 +11,7 @@ from PIL import Image
 from ml_model import ML
 from PIL import ImageFont
 from PIL import ImageDraw
+from waitress import serve
 import silence_tensorflow.auto
 from melody import generate_WAV
 from segmenter.slicer import Slice
@@ -130,4 +131,8 @@ if __name__=="__main__":
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)
     app.logger.setLevel(logging.DEBUG)
-    app.run()
+    if(USE_NGROK):
+        app.run()
+    else:
+#         serve(app, host='0.0.0.0', port=8080)
+        app.run(host='0.0.0.0')
