@@ -6,7 +6,6 @@ import traceback
 import logging
 import ctc_utils
 import numpy as np
-import simpleaudio as sa
 from pathlib import Path
 from midi.player import *
 from scipy.io.wavfile import write as WAV

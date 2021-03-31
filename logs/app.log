@@ -1539,3 +1539,72 @@ INFO:root:AUDIO: generating melody
 INFO:app:All processes completed: 31.694361686706543
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2021 17:15:24] "[37mPOST /predict HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [31/Mar/2021 17:16:38] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:app:POST: success
+INFO:app:# of files in request: 1
+INFO:app:Host: 0087f774d743.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 30157
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=58c9559a-ebcf-4128-8bbd-9f678530ad86
+X-Forwarded-For: 180.190.55.39
+X-Forwarded-Proto: https
+
+
+INFO:app:File: exists
+INFO:app:File: name = wishyoumerry.png
+INFO:app:File: exists | Format: matching
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'iCCP' 41 2340
+DEBUG:PIL.PngImagePlugin:iCCP profile name b'icc'
+DEBUG:PIL.PngImagePlugin:Compression method 0
+DEBUG:PIL.PngImagePlugin:STREAM b'cHRM' 2393 32
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 2437 2
+DEBUG:PIL.PngImagePlugin:b'bKGD' 2437 2 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 2451 9
+DEBUG:PIL.PngImagePlugin:STREAM b'tIME' 2472 7
+DEBUG:PIL.PngImagePlugin:b'tIME' 2472 7 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 2491 27097
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 29600 37
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 29649 37
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 29698 29
+INFO:segmenter:SLICER: beginning binarization 0.0
+INFO:segmenter:SLICER: beginning segmentation 68.37824726104736
+INFO:segmenter:SLICER: beginning cropping 74.93956255912781
+INFO:segmenter:SLICER: image++ in outputs 74.93956255912781
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 41 4
+DEBUG:PIL.PngImagePlugin:STREAM b'cHRM' 57 32
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 101 2
+DEBUG:PIL.PngImagePlugin:b'bKGD' 101 2 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'caNv' 115 16
+DEBUG:PIL.PngImagePlugin:b'caNv' 115 16 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 143 1757
+INFO:segmenter:SLICER: image++ in outputs 75.25707483291626
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 41 4
+DEBUG:PIL.PngImagePlugin:STREAM b'cHRM' 57 32
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 101 2
+DEBUG:PIL.PngImagePlugin:b'bKGD' 101 2 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'caNv' 115 16
+DEBUG:PIL.PngImagePlugin:b'caNv' 115 16 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 143 1140
+INFO:segmenter:SLICER: image++ in outputs 76.13563060760498
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 41 4
+DEBUG:PIL.PngImagePlugin:STREAM b'cHRM' 57 32
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 101 2
+DEBUG:PIL.PngImagePlugin:b'bKGD' 101 2 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'caNv' 115 16
+DEBUG:PIL.PngImagePlugin:b'caNv' 115 16 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 143 1376
+INFO:segmenter:SLICER: work completed 76.16903328895569
+INFO:model:MODEL: sliced segments: 76.29729676246643
+INFO:model:MODEL: predicting segment76.3442907333374
+INFO:model:MODEL: work completed 105.98244881629944
+INFO:model:MODEL: predicting segment105.98244881629944
+INFO:model:MODEL: work completed 106.56462502479553
+INFO:model:MODEL: predicting segment106.56462502479553
+INFO:model:MODEL: work completed 107.29844760894775
+INFO:root:AUDIO: generating melody
+INFO:app:All processes completed: 116.87309861183167
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2021 17:52:09] "[37mPOST /predict HTTP/1.1[0m" 200 -

@@ -85,3 +85,18 @@ X-Forwarded-Proto: https
 2021-03-31 17:14:52,467 - app - INFO - File: name = joy_c.jpg
 2021-03-31 17:14:52,467 - app - INFO - File: exists | Format: matching
 2021-03-31 17:15:24,161 - app - INFO - All processes completed: 31.694361686706543
+2021-03-31 17:50:11,873 - app - INFO - POST: success
+2021-03-31 17:50:12,085 - app - INFO - # of files in request: 1
+2021-03-31 17:50:12,098 - app - INFO - Host: 0087f774d743.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 30157
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=58c9559a-ebcf-4128-8bbd-9f678530ad86
+X-Forwarded-For: 180.190.55.39
+X-Forwarded-Proto: https
+
+
+2021-03-31 17:50:12,099 - app - INFO - File: exists
+2021-03-31 17:50:12,099 - app - INFO - File: name = wishyoumerry.png
+2021-03-31 17:50:12,318 - app - INFO - File: exists | Format: matching
+2021-03-31 17:52:09,191 - app - INFO - All processes completed: 116.87309861183167
