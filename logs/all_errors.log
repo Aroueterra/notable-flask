@@ -28,3 +28,60 @@ X-Forwarded-Proto: https
 2021-03-31 15:43:52,234 - app - INFO - File: name = holynight_c.png
 2021-03-31 15:43:52,234 - app - INFO - File: exists | Format: matching
 2021-03-31 15:44:05,334 - app - INFO - All processes completed: 13.10050082206726
+2021-03-31 16:27:15,414 - app - INFO - POST: success
+2021-03-31 16:27:15,479 - app - INFO - # of files in request: 1
+2021-03-31 16:27:15,479 - app - INFO - Host: 9364a603f1ff.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 571029
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=20924dfa-1ddd-42e5-a9fb-47b078323624
+X-Forwarded-For: 180.190.55.39
+X-Forwarded-Proto: https
+
+
+2021-03-31 16:27:15,480 - app - INFO - File: exists
+2021-03-31 16:27:15,480 - app - INFO - File: name = happybday_c.jpg
+2021-03-31 16:27:15,480 - app - INFO - File: exists | Format: matching
+2021-03-31 16:27:35,457 - app - INFO - All processes completed: 19.97638201713562
+2021-03-31 16:31:07,657 - app - INFO - POST: success
+2021-03-31 16:31:07,657 - app - INFO - # of files in request: 1
+2021-03-31 16:31:07,658 - app - INFO - Host: 9364a603f1ff.ngrok.io
+User-Agent: okhttp/5.0.0-alpha.2
+Content-Length: 870432
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=11cac575-a9dd-439d-9b7b-a52c05d0390f
+X-Forwarded-For: 180.190.55.39
+X-Forwarded-Proto: https
+
+
+2021-03-31 16:31:07,658 - app - INFO - File: exists
+2021-03-31 16:31:07,658 - app - INFO - File: name = holynight_c.png
+2021-03-31 16:31:07,658 - app - INFO - File: exists | Format: matching
+2021-03-31 16:31:39,577 - app - INFO - All processes completed: 31.9189772605896
+2021-03-31 17:14:52,407 - app - INFO - POST: success
+2021-03-31 17:14:52,466 - app - INFO - # of files in request: 1
+2021-03-31 17:14:52,467 - app - INFO - Host: 0087f774d743.ngrok.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Content-Length: 594317
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryqiJBu6ZS14LGAF9U
+Origin: https://0087f774d743.ngrok.io
+Referer: https://0087f774d743.ngrok.io/
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
+X-Forwarded-Proto: https
+
+
+2021-03-31 17:14:52,467 - app - INFO - File: exists
+2021-03-31 17:14:52,467 - app - INFO - File: name = joy_c.jpg
+2021-03-31 17:14:52,467 - app - INFO - File: exists | Format: matching
+2021-03-31 17:15:24,161 - app - INFO - All processes completed: 31.694361686706543

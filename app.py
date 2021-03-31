@@ -23,7 +23,7 @@ from apputil import normalize, resize, sparse_tensor_to_strs, elements, allowed_
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 # SETUP APPLICATION
-UPLOAD_FOLDER = 'input'
+UPLOAD_FOLDER = 'sent_images'
 
 app = Flask(__name__, static_url_path='')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -89,8 +89,6 @@ def predict():
             try:
                 np_img = np.array(img)
                 cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2GRAY)
-                save = np.array(cv_img)
-                cv2.imwrite('logs/sent_image.jpg', save)
             except Exception as e:
                 app.logger.error("ERROR: conversion error")
                 app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))

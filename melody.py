@@ -14,24 +14,15 @@ import tensorflow.python.util.deprecation as deprecation
 def generate_WAV(all_predictions, merged):
     logging.basicConfig(filename='logs/melody.log', level=logging.DEBUG)
     SEMANTIC = ''
-    playlist = []
-    track = 0
-    export = 0
+    track = export = 0
     single = merged
-    directory = 'data\\melody\\'
-    del_directory = '\\data\\melody'
-    mypath = Path().absolute()
-    delete_str = str(mypath) + del_directory
-    remove_dir = os.listdir(delete_str)
-    for item in remove_dir:
-        if (item.endswith(".wav")) or (item.endswith(".txt")):
-            os.remove(os.path.join(delete_str, item))
     all_predictions = [x for x in all_predictions if x.strip()]
-    logging.info("SYMBOL: printing all predictions")   
+    playlist = []
     text_files = []
     song_files = []
     fullsong_file = []
     temp_file=BytesIO()
+    logging.info("AUDIO: generating melody")   
     try:
         for SEMANTIC in all_predictions:
             if SEMANTIC:

@@ -1,23 +1,10 @@
-@font-face {
-  font-family: "kaneda_gothic_boldbold";
-  src: url("kanedagothic-bold-webfont.woff2") format("woff2"),
-    url("kanedagothic-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kaneda_gothic_boldbold";
-  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff2");
-  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff")
-    format("woff");
-}
+
 html,
 body {
   width: 100%;
 }
 
 h1 {
-  font-family: "kaneda_gothic_boldbold", Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 52;
@@ -33,13 +20,6 @@ table {
   align-self: center;
   max-width: 600px;
   margin: 0 auto;
-}
-html {
-  background: url(images/bgg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 body {
@@ -188,10 +168,7 @@ html {
   max-width: 500px;
   max-height: 300px;
 }   */
-.has-bg-img {
-  background: url("../images/marsh.jpg") center center;
-  background-size: cover;
-}
+
 .bgg-img {
   background-image: linear-gradient(
       41deg,
@@ -556,10 +533,6 @@ html {
   position: absolute;
   right: 70;
 }
-.avatar {
-  margin-top: 10px;
-}
-
 .mascot {
   position: absolute;
   left: 290px;
@@ -634,130 +607,37 @@ html {
   color: rgb(245, 253, 255);
 }
 
-.tippy-popper[x-placement^="right"] .tippy-tooltip.tomato-theme .tippy-arrow {
+.tippy-popper[x-placement^=right] .tippy-tooltip.tomato-theme .tippy-arrow {
   border-right: 7px solid rgb(245, 253, 255); /* your color here */
 }
 
 .is-horizontal-center {
   justify-content: center;
 }
-.is-space {
-  margin-top: 300px;
-}
-.is-half-space {
-  margin-top: 150px;
-}
-.is-small-space {
-  margin-top: 130px;
+
+
+
+/*  */
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-.nametag {
-  min-width: 137px;
-  width: 20px;
-  max-width: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-}
-
-#tab-content div {
+.pace-inactive {
   display: none;
 }
 
-#tab-content div.is-active {
-  display: block;
-}
-.shorten {
-  width: 145px;
-  font-size: 1.2vw;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 50px;
-}
-
-/** = =====
- flexbox ==== */
-
-.tmedia-body {
-  flex: 1;
-}
-
-.tmedia,
-.tmedia--reverse {
-  display: flex;
-  align-items: flex-start;
-}
-
-.tmedia--reverse > .media-object {
-  order: 1;
-}
-
-/**==== visuals 
-==*/
-
-.tmedia-body > p {
-  background: #f2f2f2;
-}
-
-.th3 {
-  height: 20px;
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 0.7em;
-}
-
-.tmedia-body > p {
-  min-height: 200px;
-}
-
-.tmedia-body {
-  flex: 1;
-  padding: 0 10px;
-}
-
-.tmedia,
-.tmedia--reverse {
-  max-width: 30em;
-  display: flex;
-  align-items: flex-start;
-  border: 1px solid #f2f2f2;
-  padding: 10px;
-  margin: 10px;
-  flex-basis: 30em;
-}
-
-tbody {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-html {
-  --scrollbarBG: #cfd8dc;
-  --thumbBG: #90a4ae;
-}
-
-::-webkit-scrollbar {
-  width: 11px;
-}
-
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
-}
-
-.barder {
-  padding: 2px;
-  border: 5px solid white;
-  margin-bottom: 5px;
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }

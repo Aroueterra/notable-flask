@@ -1,23 +1,10 @@
-@font-face {
-  font-family: "kaneda_gothic_boldbold";
-  src: url("kanedagothic-bold-webfont.woff2") format("woff2"),
-    url("kanedagothic-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kaneda_gothic_boldbold";
-  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff2");
-  src: url("http://localhost/FloreseLab3/fonts/kanedagothic-bold-webfont.woff")
-    format("woff");
-}
+
 html,
 body {
   width: 100%;
 }
 
 h1 {
-  font-family: "kaneda_gothic_boldbold", Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 52;
@@ -33,13 +20,6 @@ table {
   align-self: center;
   max-width: 600px;
   margin: 0 auto;
-}
-html {
-  background: url(images/bgg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 body {
@@ -188,10 +168,7 @@ html {
   max-width: 500px;
   max-height: 300px;
 }   */
-.has-bg-img {
-  background: url("../images/marsh.jpg") center center;
-  background-size: cover;
-}
+
 .bgg-img {
   background-image: linear-gradient(
       41deg,

@@ -33,20 +33,18 @@ logging.basicConfig(filename='logs/slicer.log', level=logging.DEBUG)
 log = setup_logger('segmenter', r'\logs\segmenter.log')
 def Slice(cv_img):
     start_time = time.time()
-    img_buffer=None
-    imgf=None
-    imgmat=None
+    img_buffer = imgf = imgmat = None
     segmented_staves=[]
     log.info("SLICER: beginning binarization " + str(time.time() - start_time))
     try:
         with Image.from_array(cv_img) as im:
-            img_buffer = np.asarray(bytearray(im.make_blob("JPEG")), dtype=np.uint8)
+            img_buffer = np.asarray(bytearray(im.make_blob("PNG")), dtype=np.uint8)
             ret, mat = binarize_image(img_buffer)
             with Image(blob=mat) as timg:
                 imgf = mat
                 timg.deskew(0.4*im.quantum_range)
                 imgf = np.array(timg)
-                img_buffer = np.asarray(bytearray(timg.make_blob("JPEG")), dtype=np.uint8)
+                img_buffer = np.asarray(bytearray(timg.make_blob("PNG")), dtype=np.uint8)
                 imgmat = cv2.imdecode(img_buffer, cv2.IMREAD_GRAYSCALE)
     except cv2.error as e:
         log.error(traceback.format_exc())   
