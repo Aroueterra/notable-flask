@@ -90,3 +90,5 @@ sent_image.jpg
 test.png
 test0.jpg
 test2.jpg
+*.png
+*.jpg

@@ -19,7 +19,7 @@ from flask_ngrok import run_with_ngrok
 from logging.handlers import RotatingFileHandler
 from flask import Flask,request,send_from_directory,render_template,flash,redirect,url_for,send_file,jsonify
 from apputil import normalize, resize, sparse_tensor_to_strs, elements, allowed_file, compress
-USE_NGROK = False
+
 # GLOBAL ACCESS
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -30,8 +30,8 @@ app = Flask(__name__, static_url_path='')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "key"
 
-if(USE_NGROK):
-    run_with_ngrok(app)
+
+run_with_ngrok(app)
 model = ML(config.model,config.voc_file,config.input_dir,
            config.slice_dir,config.classification,config.seq)
 session = model.setup()
@@ -131,8 +131,7 @@ if __name__=="__main__":
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)
     app.logger.setLevel(logging.DEBUG)
-    if(USE_NGROK):
-        app.run()
-    else:
-#         serve(app, host='0.0.0.0', port=8080)
-        app.run(host='0.0.0.0')
+    print('serve')
+    serve(app, host='0.0.0.0', port=8000)
+    print('serving')
+#     app.run()

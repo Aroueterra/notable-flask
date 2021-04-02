@@ -100,3 +100,46 @@ X-Forwarded-Proto: https
 2021-03-31 17:50:12,099 - app - INFO - File: name = wishyoumerry.png
 2021-03-31 17:50:12,318 - app - INFO - File: exists | Format: matching
 2021-03-31 17:52:09,191 - app - INFO - All processes completed: 116.87309861183167
+2021-04-02 11:21:47,458 - app - INFO - POST: success
+2021-04-02 11:21:47,516 - app - INFO - # of files in request: 1
+2021-04-02 11:21:47,516 - app - INFO - Host: 127.0.0.1:8000
+Connection: keep-alive
+Content-Length: 25985
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.1:8000
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryqCgtvI5BXiBjWo1E
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.1:8000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: hblid=SpduFrNYQN1GNvwN3m39N0HBa6Kojfb6; olfsk=olfsk9412536211279594
+
+
+2021-04-02 11:21:47,516 - app - INFO - File: exists
+2021-04-02 11:21:47,516 - app - INFO - File: name = happybday.PNG
+2021-04-02 11:21:47,516 - app - INFO - File: exists | Format: matching
+2021-04-02 11:22:03,609 - app - INFO - All processes completed: 16.091460704803467
+2021-04-02 11:22:06,822 - app - INFO - POST: success
+2021-04-02 11:22:06,822 - app - INFO - # of files in request: 0
+2021-04-02 11:22:06,822 - app - INFO - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Host: 127.0.0.1:8000
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: identity
+Accept-Language: en-US,en;q=0.9
+Accept-Charset: *
+Origin: http://127.0.0.1:8000
+Referer: http://127.0.0.1:8000/
+Cookie: hblid=SpduFrNYQN1GNvwN3m39N0HBa6Kojfb6; olfsk=olfsk9412536211279594
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryqCgtvI5BXiBjWo1E
+Content-Length: 148
+
+
+2021-04-02 11:22:06,822 - app - ERROR - No file part in request.files
