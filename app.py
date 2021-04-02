@@ -29,9 +29,9 @@ UPLOAD_FOLDER = 'sent_images'
 app = Flask(__name__, static_url_path='')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "key"
+port = int(os.environ.get('PORT', 33507))
 
-
-run_with_ngrok(app)
+#run_with_ngrok(app)
 model = ML(config.model,config.voc_file,config.input_dir,
            config.slice_dir,config.classification,config.seq)
 session = model.setup()
@@ -132,6 +132,6 @@ if __name__=="__main__":
     app.logger.addHandler(handler)
     app.logger.setLevel(logging.DEBUG)
     print('serve')
-    serve(app, host='0.0.0.0', port=8000)
+    serve(app, host='0.0.0.0', port=port)
     print('serving')
 #     app.run()
