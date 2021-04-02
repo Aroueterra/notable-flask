@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT app:heroku_app
+web: waitress-serve --port=$PORT app:heroku_app --log-file -
