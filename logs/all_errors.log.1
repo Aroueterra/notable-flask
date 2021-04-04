@@ -1,198 +1,158 @@
-2021-03-31 14:23:13,845 - app - INFO - Host: ac506c3b2af9.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 1537
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryQxNKUtA5Aj8uANuX
-Origin: https://ac506c3b2af9.ngrok.io
-Referer: https://ac506c3b2af9.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
-
-2021-03-31 14:23:13,866 - app - INFO - File: exists
-2021-03-31 14:23:13,866 - app - INFO - File: name = slice0.png
-2021-03-31 14:23:13,866 - app - INFO - File: exists | Format: matching
-2021-03-31 14:23:16,935 - app - ERROR - ERROR: prediction exceptionmodule 'cv2.cv2' has no attribute 'COLOR_GRAY2RBG'
-2021-03-31 14:23:17,035 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 100, in predict
+2021-04-03 16:54:23,871 - app - ERROR - ERROR: prediction exception black pixel overflow
+2021-04-03 16:54:24,012 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
     all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 72, in predict
-    image = cv2.cvtColor(np.float32(img), cv2.COLOR_GRAY2RBG)
-AttributeError: module 'cv2.cv2' has no attribute 'COLOR_GRAY2RBG'
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    raise ValueError("black pixel overflow")
+ValueError: black pixel overflow
 
-2021-03-31 14:40:39,044 - app - INFO - POST: success
-2021-03-31 14:40:39,148 - app - INFO - # of files in request: 1
-2021-03-31 14:40:39,148 - app - INFO - Host: cf6c0a3e53a5.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 1537
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryROhK6GHdfts4rxB7
-Origin: https://cf6c0a3e53a5.ngrok.io
-Referer: https://cf6c0a3e53a5.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
-
-2021-03-31 14:40:39,149 - app - INFO - File: exists
-2021-03-31 14:40:39,149 - app - INFO - File: name = slice0.png
-2021-03-31 14:40:39,149 - app - INFO - File: exists | Format: matching
-2021-03-31 14:40:44,504 - app - ERROR - ERROR: prediction exceptionExpected Ptr<cv::UMat> for argument 'src'
-2021-03-31 14:40:44,599 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 100, in predict
+2021-04-03 16:54:35,338 - app - ERROR - ERROR: prediction exception black pixel overflow
+2021-04-03 16:54:35,338 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
     all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 76, in predict
-    image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-TypeError: Expected Ptr<cv::UMat> for argument 'src'
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    raise ValueError("black pixel overflow")
+ValueError: black pixel overflow
 
-2021-03-31 14:47:50,483 - app - INFO - POST: success
-2021-03-31 14:47:50,765 - app - INFO - # of files in request: 1
-2021-03-31 14:47:50,766 - app - INFO - Host: 2e7efd621db4.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 1537
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundarykqd4EvGVDYXm0TDr
-Origin: https://2e7efd621db4.ngrok.io
-Referer: https://2e7efd621db4.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
+2021-04-03 16:54:46,117 - app - ERROR - ERROR: prediction exception list index out of range
+2021-04-03 16:54:46,118 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
+    segments = segment(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
+    segmenter = Segmenter(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
+    self.thickness, self.spacing = calculate_thickness_spacing(
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
+    pair, count = Counter(flattened).most_common()[0]
+IndexError: list index out of range
 
-2021-03-31 14:47:50,766 - app - INFO - File: exists
-2021-03-31 14:47:50,766 - app - INFO - File: name = slice0.png
-2021-03-31 14:47:50,766 - app - INFO - File: exists | Format: matching
-2021-03-31 14:47:57,449 - app - INFO - All processes completed: 6.6823320388793945
-2021-03-31 14:55:35,675 - app - INFO - POST: success
-2021-03-31 14:55:35,675 - app - INFO - # of files in request: 1
-2021-03-31 14:55:35,675 - app - INFO - Host: 2e7efd621db4.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 570558
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7GzEglrydFhrZNOJ
-Origin: https://2e7efd621db4.ngrok.io
-Referer: https://2e7efd621db4.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
+2021-04-03 16:55:27,059 - app - ERROR - ERROR: prediction exception list index out of range
+2021-04-03 16:55:27,059 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
+    segments = segment(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
+    segmenter = Segmenter(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
+    self.thickness, self.spacing = calculate_thickness_spacing(
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
+    pair, count = Counter(flattened).most_common()[0]
+IndexError: list index out of range
 
-2021-03-31 14:55:35,676 - app - INFO - File: exists
-2021-03-31 14:55:35,676 - app - INFO - File: name = happybday2.jpg
-2021-03-31 14:55:35,676 - app - INFO - File: exists | Format: matching
-2021-03-31 14:55:38,155 - app - INFO - All processes completed: 2.4789388179779053
-2021-03-31 15:03:19,540 - app - INFO - POST: success
-2021-03-31 15:03:19,540 - app - INFO - # of files in request: 1
-2021-03-31 15:03:19,541 - app - INFO - Host: 2e7efd621db4.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 27534
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary396dHHvAofhqBvQF
-Origin: https://2e7efd621db4.ngrok.io
-Referer: https://2e7efd621db4.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
+2021-04-03 16:55:41,407 - app - ERROR - ERROR: prediction exception list index out of range
+2021-04-03 16:55:41,407 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
+    segments = segment(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
+    segmenter = Segmenter(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
+    self.thickness, self.spacing = calculate_thickness_spacing(
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
+    pair, count = Counter(flattened).most_common()[0]
+IndexError: list index out of range
 
-2021-03-31 15:03:19,541 - app - INFO - File: exists
-2021-03-31 15:03:19,541 - app - INFO - File: name = silentnight.png
-2021-03-31 15:03:19,541 - app - INFO - File: exists | Format: matching
-2021-03-31 15:03:24,342 - app - INFO - All processes completed: 4.800878047943115
-2021-03-31 15:26:12,142 - app - INFO - POST: success
-2021-03-31 15:26:12,280 - app - INFO - # of files in request: 1
-2021-03-31 15:26:12,282 - app - INFO - Host: 2e7efd621db4.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 544288
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBdADPtComhHEdBKe
-Origin: https://2e7efd621db4.ngrok.io
-Referer: https://2e7efd621db4.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
+2021-04-03 16:56:56,899 - app - ERROR - ERROR: prediction exception list index out of range
+2021-04-03 16:56:56,899 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
+    segments = segment(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
+    segmenter = Segmenter(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
+    self.thickness, self.spacing = calculate_thickness_spacing(
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
+    pair, count = Counter(flattened).most_common()[0]
+IndexError: list index out of range
 
-2021-03-31 15:26:12,282 - app - INFO - File: exists
-2021-03-31 15:26:12,282 - app - INFO - File: name = odetojoy.png
-2021-03-31 15:26:12,328 - app - INFO - File: exists | Format: matching
-2021-03-31 15:26:55,116 - app - INFO - All processes completed: 42.78828740119934
-2021-03-31 15:30:33,913 - app - INFO - POST: success
-2021-03-31 15:30:33,913 - app - INFO - # of files in request: 1
-2021-03-31 15:30:33,913 - app - INFO - Host: 2e7efd621db4.ngrok.io
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Content-Length: 570804
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9
-Cache-Control: max-age=0
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTab1NPoiIVt7RzTp
-Origin: https://2e7efd621db4.ngrok.io
-Referer: https://2e7efd621db4.ngrok.io/
-Sec-Ch-Ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
-Sec-Ch-Ua-Mobile: ?0
-Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 2001:fd8:b210:9466:fd23:a3e0:82d:c780
-X-Forwarded-Proto: https
-
+2021-04-03 16:58:46,326 - app - ERROR - ERROR: compression exceptionlist index out of range
+2021-04-03 16:58:46,347 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 130, in predict
+    memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\apputil.py", line 88, in compress
+    zipf.writestr('full_song.wav', fullsong_file[0].getvalue())
+IndexError: list index out of range
 
-2021-03-31 15:30:33,914 - app - INFO - File: exists
+2021-04-03 16:59:57,219 - app - ERROR - ERROR: prediction exception list index out of range
+2021-04-03 16:59:57,220 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
+    segments = segment(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
+    segmenter = Segmenter(imgmat)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
+    self.thickness, self.spacing = calculate_thickness_spacing(
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
+    pair, count = Counter(flattened).most_common()[0]
+IndexError: list index out of range
+
+2021-04-03 17:20:27,244 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 17:20:27,245 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 35, in generate_WAV
+    audio *= 32767 / np.max(np.abs(audio))
+  File "<__array_function__ internals>", line 5, in amax
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\fromnumeric.py", line 2705, in amax
+    return _wrapreduction(a, np.maximum, 'max', axis, None, out,
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\fromnumeric.py", line 87, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+ValueError: zero-size array to reduction operation maximum which has no identity
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-03 17:20:54,269 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 17:20:54,270 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
+    audio =  np.hstack(audio)
+  File "<__array_function__ internals>", line 5, in hstack
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\shape_base.py", line 346, in hstack
+    return _nx.concatenate(arrs, 1)
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: need at least one array to concatenate
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-03 17:25:40,851 - app - ERROR - ERROR: prediction exception black pixel overflow
+2021-04-03 17:25:40,852 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    raise ValueError("black pixel overflow")
+ValueError: black pixel overflow
+
+2021-04-03 17:34:47,386 - app - ERROR - ERROR: prediction exception black pixel overflow

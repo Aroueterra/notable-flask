@@ -9,24 +9,32 @@ import zipfile
 import logging
 from PIL import Image
 from ml_model import ML
+
 from PIL import ImageFont
 from PIL import ImageDraw
 from waitress import serve
 import silence_tensorflow.auto
 from melody import generate_WAV
 from segmenter.slicer import Slice
+from pyngrok.conf import PyngrokConfig
+from pyngrok import ngrok,conf
+
 from flask_ngrok import run_with_ngrok
 from logging.handlers import RotatingFileHandler
 from flask import Flask,request,send_from_directory,render_template,flash,redirect,url_for,send_file,jsonify
-from apputil import normalize, resize, sparse_tensor_to_strs, elements, allowed_file, compress
+from apputil import normalize, resize, sparse_tensor_to_strs, elements, allowed_file, compress, estimate_noise, format_error
 
 # GLOBAL ACCESS
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+conf.get_default().config_path = "/ngrok/ngrok.yml"
+conf.get_default().region = "ap"
+ngrok.set_auth_token("1nM8RPS113N7wSZvyYJ3VpgADFl_53evML7vJRGGYJA8PhCK6")# in ngrok.yml
 # SETUP APPLICATION
 UPLOAD_FOLDER = 'sent_images'
 #static_url_path=''
 heroku_app = None
+
 try:
     heroku_app = Flask(__name__)
     logging.info('Starting up..')
@@ -68,6 +76,7 @@ def test_output():
 def predict():
     if request.method == 'POST':
         count = list(request.files)
+        memory_file = None
         heroku_app.logger.info('POST: success')
         heroku_app.logger.info('# of files in request: ' + str(len(count)))
         heroku_app.logger.info(str(request.headers))
@@ -86,32 +95,44 @@ def predict():
             try:
                 f.save(os.path.join(heroku_app.config['UPLOAD_FOLDER'], f.filename))
                 img = Image.open(request.files['file'].stream).convert('RGB')
-            except Exception:
+            except Exception as e:
                 heroku_app.logger.error("ERROR: image input error")
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 heroku_app.logger.error(traceback.format_exc())
-                return "Image input error"
+                return "Image sent was either corrupted or of invalid format"
             try:
                 np_img = np.array(img)
+                noise = estimate_noise(np_img)
+                heroku_app.logger.info(f'File: noise level: {noise}')
+                if(noise >= 7):
+                    raise ValueError("irregular noise levels")
                 cv_img = cv2.cvtColor(np_img, cv2.COLOR_RGB2GRAY)
             except Exception as e:
                 heroku_app.logger.error("ERROR: conversion error")
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 heroku_app.logger.error(traceback.format_exc())
-                return "Conversion error"
+                return "Atypical bulk of noise detected, retake image"
             try:
                 all_predictions, segmented_staves = model.predict(cv_img)
             except Exception as e:
-                heroku_app.logger.error('ERROR: prediction exception' + str(e))
+                heroku_app.logger.error('ERROR: prediction exception ' + str(e))
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
-                return "Prediction error"
+                info = format_error(e)
+                return f"Prediction error: {info}"
             try:
                 text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
-                memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
             except Exception as e:
                 heroku_app.logger.error('ERROR: audio exception'  + str(e))
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
-                return "Audio/compression error"
+                info = format_error(e)
+                return f"Audio error: {info}"
+            try:
+                memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
+            except Exception as e:
+                heroku_app.logger.error('ERROR: compression exception'  + str(e))
+                heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
+                info = format_error(e)
+                return f"Compression error: {info}"
             heroku_app.logger.info("All processes completed: " + str(time.time() - start_time) )
             return send_file(memory_file,
                     attachment_filename='archive.zip',
@@ -135,10 +156,14 @@ if __name__=="__main__":
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     handler.setFormatter(formatter)
     heroku_app.logger.addHandler(handler)
-    heroku_app.logger.setLevel(logging.DEBUG)
+    heroku_app.logger.setLevel(logging.ERROR)
     print(f'serve {str(port)}')
     #print('serve')web: waitress-serve --port=$PORT app:app
     #heroku_app.run(debug=False, port=get_port(), host='0.0.0.0')host='0.0.0.0'
-    serve(heroku_app, port=port)
+    public_url = ngrok.connect(80, "http", subdomain="notable-server").public_url
+    #public_url = ngrok.connect(addr=80, proto="https", name="notable-server.ap").public_url
+    print(f'serve {str(public_url)}')
+    serve(heroku_app, port=80)
+    
     #print('serving')
 #     heroku_app.run()

@@ -25,6 +25,8 @@ def generate_WAV(all_predictions, merged):
     try:
         for SEMANTIC in all_predictions:
             if SEMANTIC:
+                logging.info(SEMANTIC)
+                print(SEMANTIC)
                 # gets the audio file
                 audio = get_sinewave_audio(SEMANTIC)
                 # horizontally stacks the freqs    
@@ -39,6 +41,7 @@ def generate_WAV(all_predictions, merged):
     except Exception as e:
         logging.error(traceback.format_exc())   
         logging.error("AUDIO: could not generate sinewave audio")
+        raise ValueError("could not generate sinewave audio")
     try:
         if(playlist):
             if(single == "true"):
@@ -62,7 +65,8 @@ def generate_WAV(all_predictions, merged):
                 fullsong_file.append(fullsong_bytes)
     except Exception as e:
         logging.error(traceback.format_exc())   
-        logging.error("AUDIO: could not generate sinewave audio")
+        logging.error("could not generate wav audio")
+        raise ValueError("could not create wav files, no notes detected")
     return text_files, fullsong_file, song_files
 
 

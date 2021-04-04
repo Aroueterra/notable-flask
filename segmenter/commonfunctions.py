@@ -80,6 +80,7 @@ def crop2(path):
 def binarize_image(img):
     mat = cv2.imdecode(img, cv2.IMREAD_UNCHANGED)
     ret3, bin_img = cv2.threshold(mat,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    
     return cv2.imencode(".jpg", bin_img)
 
 def make_image(data, outputname, size=(128, 200), dpi=80):

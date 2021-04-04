@@ -6,8 +6,18 @@ import logging
 import zipfile
 import numpy as np
 from io import BytesIO
+from skimage.restoration import estimate_sigma
 
-def setup_logger(logger_name, log_file, level=logging.DEBUG):
+def format_error(e):
+    e = str(e)
+    infolen = (75) if len(e) > 75 else len(e)
+    info = (e[:infolen] + '..')
+    return info
+
+def estimate_noise(img):
+    return estimate_sigma(img, multichannel=True, average_sigmas=True)
+
+def setup_logger(logger_name, log_file, level=logging.ERROR):
     l = logging.getLogger(logger_name)
     basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
     log_file = basepath + log_file

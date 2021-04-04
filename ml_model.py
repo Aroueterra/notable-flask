@@ -20,6 +20,7 @@ import ctc_utils
 import os
 from pathlib import Path
 from config import logger2
+from wrapt_timeout_decorator import *
 log = setup_logger('model', r'\logs\model.log')
 tf_v1.compat.v1.disable_eager_execution()
 class ML:
@@ -59,14 +60,16 @@ class ML:
     
     def predict(self, cv_img):
         start_time = time.time()
-        segmented_staves = Slice(cv_img)  
+        try:
+            segmented_staves = Slice(cv_img)
+        except Exception as e:
+            raise
         log.info("MODEL: sliced segments: " + str(time.time() - start_time))    
         all_predictions=[]
         current_file = segmented_staves[0]
         for i, img in enumerate(segmented_staves):
             log.info("MODEL: predicting segment" + str(time.time() - start_time))   
             opencv_image = np.array(img) 
-            #print('OpenCV: ', opencv_image.shape)
             # Convert GRY to BGR 
             with Image.fromarray((opencv_image * 255).astype('uint8'), mode='L') as img:
                 image = cv2.cvtColor(np.float32(img), cv2.COLOR_GRAY2BGR)
