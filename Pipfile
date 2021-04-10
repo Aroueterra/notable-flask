@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+opencv-python = "==4.4.0.46"
+matplotlib = "==3.3.2"
+numpy = "==1.19.2"
+silence-tensorflow = "==1.1.1"
+scipy = "==1.5.2"
+imutils = "==0.5.4"
+scikit-image = "==0.17.2"
+pyngrok = "==5.0.1"
+waitress = "==2.0.0"
+dictionary = "==1.0"
+Wand = "==0.6.5"
+Pillow = "==8.2.0"
+werkzeug = "==0.16.0"
+
+[dev-packages]
+Flask = "*"
+tensorflow = "*"
+
+[requires]
+python_version = "3.7"

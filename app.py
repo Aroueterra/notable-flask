@@ -124,7 +124,7 @@ def predict():
             try:
                 memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
             except Exception as e:
-                heroku_app.logger.error(f'ERROR: compression exception {str(e)}'
+                heroku_app.logger.error(f'ERROR: compression exception {str(e)}')
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 info = format_error(e)
                 return f"Compression error: {info}"
