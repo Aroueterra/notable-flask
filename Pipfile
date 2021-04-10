@@ -20,7 +20,7 @@ werkzeug = "==0.16.0"
 
 [dev-packages]
 Flask = "*"
-tensorflow = "*"
+tensorflow = "==2.4.0"
 
 [requires]
 python_version = "3.7"
