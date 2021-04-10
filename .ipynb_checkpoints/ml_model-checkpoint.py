@@ -20,7 +20,7 @@ import ctc_utils
 import os
 from pathlib import Path
 from config import logger2
-from wrapt_timeout_decorator import *
+
 log = setup_logger('model', r'\logs\model.log')
 tf_v1.compat.v1.disable_eager_execution()
 class ML:

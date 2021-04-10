@@ -9,7 +9,6 @@ import zipfile
 import logging
 from PIL import Image
 from ml_model import ML
-
 from PIL import ImageFont
 from PIL import ImageDraw
 from waitress import serve
@@ -18,8 +17,6 @@ from melody import generate_WAV
 from segmenter.slicer import Slice
 from pyngrok.conf import PyngrokConfig
 from pyngrok import ngrok,conf
-
-from flask_ngrok import run_with_ngrok
 from logging.handlers import RotatingFileHandler
 from flask import Flask,request,send_from_directory,render_template,flash,redirect,url_for,send_file,jsonify
 from apputil import normalize, resize, sparse_tensor_to_strs, elements, allowed_file, compress, estimate_noise, format_error
@@ -32,7 +29,6 @@ conf.get_default().region = "ap"
 ngrok.set_auth_token("1nM8RPS113N7wSZvyYJ3VpgADFl_53evML7vJRGGYJA8PhCK6")# in ngrok.yml
 # SETUP APPLICATION
 UPLOAD_FOLDER = 'sent_images'
-#static_url_path=''
 heroku_app = None
 
 try:
@@ -43,7 +39,6 @@ try:
 except Exception as e:
     heroku_app.logger.exception(e)
 
-#run_with_ngrok(heroku_app)
 model = ML(config.model,config.voc_file,config.input_dir,
            config.slice_dir,config.classification,config.seq)
 session = model.setup()
@@ -78,7 +73,7 @@ def predict():
         count = list(request.files)
         memory_file = None
         heroku_app.logger.info('POST: success')
-        heroku_app.logger.info('# of files in request: ' + str(len(count)))
+        heroku_app.logger.info(f'# of files in request: {str(len(count))}')
         heroku_app.logger.info(str(request.headers))
         if 'file' not in request.files:
             heroku_app.logger.error('No file part in request.files')
@@ -88,7 +83,7 @@ def predict():
         if f.filename == '':
             return "No selected file"
         else:
-            heroku_app.logger.info("File: name = " + f.filename)
+            heroku_app.logger.info(f"File: name = {f.filename}")
         if f and allowed_file(f.filename):
             heroku_app.logger.info('File: exists | Format: matching')
             start_time = time.time()
@@ -115,25 +110,25 @@ def predict():
             try:
                 all_predictions, segmented_staves = model.predict(cv_img)
             except Exception as e:
-                heroku_app.logger.error('ERROR: prediction exception ' + str(e))
+                heroku_app.logger.error(f'ERROR: prediction exception {str(e)}')
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 info = format_error(e)
                 return f"Prediction error: {info}"
             try:
                 text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
             except Exception as e:
-                heroku_app.logger.error('ERROR: audio exception'  + str(e))
+                heroku_app.logger.error(f'ERROR: audio exception {str(e)}')
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 info = format_error(e)
                 return f"Audio error: {info}"
             try:
                 memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
             except Exception as e:
-                heroku_app.logger.error('ERROR: compression exception'  + str(e))
+                heroku_app.logger.error(f'ERROR: compression exception {str(e)}'
                 heroku_app.logger.error("".join(traceback.TracebackException.from_exception(e).format()))
                 info = format_error(e)
                 return f"Compression error: {info}"
-            heroku_app.logger.info("All processes completed: " + str(time.time() - start_time) )
+            heroku_app.logger.info(f"All processes completed: {str(time.time() - start_time)}")
             return send_file(memory_file,
                     attachment_filename='archive.zip',
                     as_attachment=True)
@@ -157,13 +152,9 @@ if __name__=="__main__":
     handler.setFormatter(formatter)
     heroku_app.logger.addHandler(handler)
     heroku_app.logger.setLevel(logging.ERROR)
-    print(f'serve {str(port)}')
-    #print('serve')web: waitress-serve --port=$PORT app:app
-    #heroku_app.run(debug=False, port=get_port(), host='0.0.0.0')host='0.0.0.0'
-    public_url = ngrok.connect(80, "http", subdomain="notable-server").public_url
-    #public_url = ngrok.connect(addr=80, proto="https", name="notable-server.ap").public_url
-    print(f'serve {str(public_url)}')
+    print(f'Serving port: {str(port)}')
+    public_url = ngrok.connect(80, "http", subdomain="notable-server").public_url #Pyngrok run
+    print(f'Ngrok tunnel opened at: {str(public_url)}')
     serve(heroku_app, port=80)
-    
-    #print('serving')
-#     heroku_app.run()
+    #print('serve')web: waitress-serve --port=$PORT app:app CLI run
+    #heroku_app.run(debug=False, port=get_port(), host='0.0.0.0') Simple run

@@ -30,13 +30,12 @@ from scipy.ndimage import binary_fill_holes
 from skimage.morphology import skeletonize, thin
 from skimage.filters import threshold_otsu, gaussian, median, threshold_yen
 from .staff import calculate_thickness_spacing, remove_staff_lines, coordinator
-from wrapt_timeout_decorator import *
+
 from skimage.restoration import estimate_sigma
 
 logging.basicConfig(filename='logs/slicer.log', level=logging.DEBUG)
 log = setup_logger('segmenter', '/logs/segmenter.log')
 
-#@timeout(20)
 def deskew_and_binarize(img):
     import io
     import cv2
@@ -53,7 +52,6 @@ def deskew_and_binarize(img):
         ret3, result = cv2.threshold(np_image,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
         return result
     
-#@timeout(24)
 def segment(imgmat):
     segmenter = Segmenter(imgmat)
     segments = segmenter.regions_with_staff
@@ -75,7 +73,7 @@ def Slice(cv_img):
         imgmat = deskew_and_binarize(cv_img) 
         np_img = np.array(imgmat)
         noise = estimate_noise(np_img)
-        wht, blk = countpix(result)
+        wht, blk = countpix(imgmat)
         log.info(f"SLICER: noise: {noise} ")
         log.info(f"SLICER: white: {wht} {blk} ")
         print(f"{wht} {blk} {noise}")

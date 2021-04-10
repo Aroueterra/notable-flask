@@ -1,5 +1,4 @@
-2021-04-03 16:54:23,871 - app - ERROR - ERROR: prediction exception black pixel overflow
-2021-04-03 16:54:24,012 - app - ERROR - Traceback (most recent call last):
+2021-04-03 17:34:47,387 - app - ERROR - Traceback (most recent call last):
   File "app.py", line 116, in predict
     all_predictions, segmented_staves = model.predict(cv_img)
   File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
@@ -8,106 +7,27 @@
     raise ValueError("black pixel overflow")
 ValueError: black pixel overflow
 
-2021-04-03 16:54:35,338 - app - ERROR - ERROR: prediction exception black pixel overflow
-2021-04-03 16:54:35,338 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
-    raise ValueError("black pixel overflow")
-ValueError: black pixel overflow
+2021-04-03 17:34:57,935 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 17:34:57,935 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
+    audio =  np.hstack(audio)
+  File "<__array_function__ internals>", line 5, in hstack
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\shape_base.py", line 346, in hstack
+    return _nx.concatenate(arrs, 1)
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: need at least one array to concatenate
 
-2021-04-03 16:54:46,117 - app - ERROR - ERROR: prediction exception list index out of range
-2021-04-03 16:54:46,118 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
-    segments = segment(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
-    segmenter = Segmenter(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
-    self.thickness, self.spacing = calculate_thickness_spacing(
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
-    pair, count = Counter(flattened).most_common()[0]
-IndexError: list index out of range
+During handling of the above exception, another exception occurred:
 
-2021-04-03 16:55:27,059 - app - ERROR - ERROR: prediction exception list index out of range
-2021-04-03 16:55:27,059 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
-    segments = segment(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
-    segmenter = Segmenter(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
-    self.thickness, self.spacing = calculate_thickness_spacing(
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
-    pair, count = Counter(flattened).most_common()[0]
-IndexError: list index out of range
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
 
-2021-04-03 16:55:41,407 - app - ERROR - ERROR: prediction exception list index out of range
-2021-04-03 16:55:41,407 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
-    segments = segment(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
-    segmenter = Segmenter(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
-    self.thickness, self.spacing = calculate_thickness_spacing(
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
-    pair, count = Counter(flattened).most_common()[0]
-IndexError: list index out of range
-
-2021-04-03 16:56:56,899 - app - ERROR - ERROR: prediction exception list index out of range
-2021-04-03 16:56:56,899 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
-    segments = segment(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
-    segmenter = Segmenter(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
-    self.thickness, self.spacing = calculate_thickness_spacing(
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
-    pair, count = Counter(flattened).most_common()[0]
-IndexError: list index out of range
-
-2021-04-03 16:58:46,326 - app - ERROR - ERROR: compression exceptionlist index out of range
-2021-04-03 16:58:46,347 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 130, in predict
-    memory_file = compress(fullsong_file, text_files, song_files, segmented_staves)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\apputil.py", line 88, in compress
-    zipf.writestr('full_song.wav', fullsong_file[0].getvalue())
-IndexError: list index out of range
-
-2021-04-03 16:59:57,219 - app - ERROR - ERROR: prediction exception list index out of range
-2021-04-03 16:59:57,220 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 96, in Slice
-    segments = segment(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 58, in segment
-    segmenter = Segmenter(imgmat)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\segmenter.py", line 12, in __init__
-    self.thickness, self.spacing = calculate_thickness_spacing(
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\staff.py", line 17, in calculate_thickness_spacing
-    pair, count = Counter(flattened).most_common()[0]
-IndexError: list index out of range
-
-2021-04-03 17:20:27,244 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
-2021-04-03 17:20:27,245 - app - ERROR - Traceback (most recent call last):
+2021-04-03 17:35:09,224 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 17:35:09,225 - app - ERROR - Traceback (most recent call last):
   File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 35, in generate_WAV
     audio *= 32767 / np.max(np.abs(audio))
   File "<__array_function__ internals>", line 5, in amax
@@ -126,8 +46,48 @@ Traceback (most recent call last):
     raise ValueError("could not generate sinewave audio")
 ValueError: could not generate sinewave audio
 
-2021-04-03 17:20:54,269 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
-2021-04-03 17:20:54,270 - app - ERROR - Traceback (most recent call last):
+2021-04-03 17:59:59,604 - app - ERROR - ERROR: prediction exception black pixel overflow
+2021-04-03 17:59:59,682 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    raise ValueError("black pixel overflow")
+ValueError: black pixel overflow
+
+2021-04-03 18:19:43,610 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 18:19:43,647 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 35, in generate_WAV
+    audio *= 32767 / np.max(np.abs(audio))
+  File "<__array_function__ internals>", line 5, in amax
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\fromnumeric.py", line 2705, in amax
+    return _wrapreduction(a, np.maximum, 'max', axis, None, out,
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\fromnumeric.py", line 87, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+ValueError: zero-size array to reduction operation maximum which has no identity
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-03 18:20:03,059 - app - ERROR - ERROR: prediction exception black pixel overflow
+2021-04-03 18:20:03,093 - app - ERROR - Traceback (most recent call last):
+  File "app.py", line 116, in predict
+    all_predictions, segmented_staves = model.predict(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
+    segmented_staves = Slice(cv_img)
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
+    raise ValueError("black pixel overflow")
+ValueError: black pixel overflow
+
+2021-04-03 18:21:23,696 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-03 18:21:23,696 - app - ERROR - Traceback (most recent call last):
   File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
     audio =  np.hstack(audio)
   File "<__array_function__ internals>", line 5, in hstack
@@ -145,14 +105,61 @@ Traceback (most recent call last):
     raise ValueError("could not generate sinewave audio")
 ValueError: could not generate sinewave audio
 
-2021-04-03 17:25:40,851 - app - ERROR - ERROR: prediction exception black pixel overflow
-2021-04-03 17:25:40,852 - app - ERROR - Traceback (most recent call last):
-  File "app.py", line 116, in predict
-    all_predictions, segmented_staves = model.predict(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\ml_model.py", line 64, in predict
-    segmented_staves = Slice(cv_img)
-  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\segmenter\slicer.py", line 84, in Slice
-    raise ValueError("black pixel overflow")
-ValueError: black pixel overflow
+2021-04-04 22:56:49,290 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-04 22:56:49,477 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
+    audio =  np.hstack(audio)
+  File "<__array_function__ internals>", line 5, in hstack
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\shape_base.py", line 346, in hstack
+    return _nx.concatenate(arrs, 1)
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: need at least one array to concatenate
 
-2021-04-03 17:34:47,386 - app - ERROR - ERROR: prediction exception black pixel overflow
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-04 23:04:00,246 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-04 23:04:00,247 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
+    audio =  np.hstack(audio)
+  File "<__array_function__ internals>", line 5, in hstack
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\shape_base.py", line 346, in hstack
+    return _nx.concatenate(arrs, 1)
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: need at least one array to concatenate
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-04 23:05:00,173 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
+2021-04-04 23:05:00,173 - app - ERROR - Traceback (most recent call last):
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 33, in generate_WAV
+    audio =  np.hstack(audio)
+  File "<__array_function__ internals>", line 5, in hstack
+  File "C:\Users\aroue\anaconda3\lib\site-packages\numpy\core\shape_base.py", line 346, in hstack
+    return _nx.concatenate(arrs, 1)
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: need at least one array to concatenate
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 123, in predict
+    text_files, fullsong_file, song_files = generate_WAV(all_predictions, "false")
+  File "C:\Users\aroue\Downloads\Documents\@ML\notable-flask\melody.py", line 44, in generate_WAV
+    raise ValueError("could not generate sinewave audio")
+ValueError: could not generate sinewave audio
+
+2021-04-04 23:13:54,376 - app - ERROR - ERROR: audio exceptioncould not generate sinewave audio
