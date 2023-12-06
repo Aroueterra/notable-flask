@@ -13,5 +13,5 @@ scipy==1.5.2
 audio_to_midi==2020.7
 dictionary==1.0
 fit==0.4.1
-Pillow==8.1.0
+Pillow==10.0.1
 train==0.0.5
